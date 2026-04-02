@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yue Guo — Product & Technical Program Manager</title>
+<meta name="description" content="Product Manager and Technical Program Manager with 9+ years across fintech, insurance, and enterprise delivery.">
+<meta name="author" content="Yue Guo">
+<meta property="og:title" content="Yue Guo — Product & Technical Program Manager">
+<meta property="og:description" content="I don't fix products. I fix the systems underneath them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:15px;scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:inherit}
+:root{
+  --white:#FFF;--bg:#FAFAF8;--text:#0F0F0F;--muted:#767670;--border:#E8E8E4;--hover:#F4F4F1;
+  --sans:'DM Sans',system-ui,-apple-system,sans-serif;--serif:'Playfair Display',Georgia,serif;
+  --accent:#E8650A;--accent-bg:#FEF1E8;--accent-hover:#CC5708;
+  --text-secondary:#333;--text-body:#444;
+  --str1:#F8F2E8;--str2:#E8EFF8;--str3:#E8F2EA;--str4:#F0EBF8;
+  --c-fintech:#FFF3E0;--c-insurance:#E8F5E9;--c-consulting:#E3F2FD;--c-financial:#F4EEE5;--c-analytics:#E6F5F7;--c-finsys:#E8EDF5;
+  --red:#E57373;--red-bg:#FFEBEE;--red-text:#C62828;
+  --green:#66BB6A;--green-bg:#E8F5E9;--green-text:#2E7D32;
+  --amber:#FFA726;--amber-bg:#FFF3E0;--amber-text:#E65100;
+  --ease-out:cubic-bezier(0.16,1,0.3,1);
+  --ease-in-out:cubic-bezier(0.4,0,0.2,1);
+  --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
+}
+body{font-family:var(--sans);background:var(--white);color:var(--text);line-height:1.65;min-height:100vh;display:flex;flex-direction:column;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;background-image:linear-gradient(rgba(200,195,186,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(200,195,186,.12) 1px,transparent 1px);background-size:80px 80px}
+
+/* ── Nav ── */
+.site-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(12px) saturate(180%);-webkit-backdrop-filter:blur(12px) saturate(180%);border-bottom:1px solid rgba(232,232,228,.8)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 32px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;flex-shrink:0;line-height:1}
+.nav-tabs{display:flex;align-items:center;gap:2px;position:relative}
+.nav-indicator{position:absolute;bottom:0;height:2px;background:var(--accent);border-radius:2px 2px 0 0;transition:left .25s var(--ease-out),width .25s var(--ease-out);pointer-events:none}
+.nav-tab{background:none;border:none;font-size:13.5px;font-weight:450;color:var(--muted);padding:6px 16px;border-radius:6px;position:relative;transition:color .15s var(--ease-out),background .15s var(--ease-out);white-space:nowrap}
+.nav-tab:hover{color:var(--text);background:var(--hover)}
+.nav-tab.active{color:var(--accent);font-weight:600}
+
+/* ── Tabs ── */
+.tab-section{display:none;flex:1}
+.tab-section.active{display:block}
+.shell{max-width:1100px;margin:0 auto;padding:64px 32px 96px}
+
+/* ── Type ── */
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.headline-xl{font-size:clamp(24px,3.2vw,42px);font-weight:400;font-family:var(--serif);line-height:1.1;letter-spacing:-.02em;font-optical-sizing:auto;font-feature-settings:'kern' 1,'liga' 1}
+.headline-xl em{font-style:italic}
+.headline-md{font-size:clamp(20px,2.8vw,32px);font-weight:400;font-family:var(--serif);letter-spacing:-.02em;font-optical-sizing:auto}
+.sec-label{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:20px}
+.section-desc{font-size:14px;color:var(--muted);line-height:1.75;margin-top:10px;margin-bottom:0;max-width:64ch}
+
+/* ── Page load stagger ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.nav-logo{animation:fadeUp .4s var(--ease-out) both}
+.about-hero .eyebrow{animation:fadeUp .5s var(--ease-out) .08s both}
+.about-hero .headline-xl{animation:fadeUp .65s var(--ease-out) .18s both}
+.about-hero .hero-sub{animation:fadeUp .5s var(--ease-out) .32s both}
+.about-hero .hero-cta{animation:fadeUp .5s var(--ease-out) .44s both}
+.about-body{animation:fadeUp .55s var(--ease-out) .28s both}
+#tab-work .headline-md,#tab-work .headline-md+p{animation:fadeUp .55s var(--ease-out) .08s both}
+#tab-contact .headline-md{animation:fadeUp .55s var(--ease-out) .08s both}
+
+/* ════════ ABOUT ════════ */
+.about-hero{border-bottom:1px solid var(--border);padding-bottom:52px;margin-bottom:52px;animation:heroFadeIn .55s var(--ease-out) both}
+@keyframes heroFadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.about-body{display:grid;grid-template-columns:1fr 290px;gap:52px;align-items:start;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--border)}
+.prose p{font-size:15.5px;line-height:1.75;color:#2a2a2a;margin-bottom:18px}
+.prose p:last-child{margin-bottom:0}
+.sidebar{border-left:1px solid var(--border);padding-left:28px}
+.s-block{margin-bottom:32px}
+.s-block:last-child{margin-bottom:0}
+.s-lbl{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.s-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+.s-list li{font-size:13.5px;color:#333;display:flex;align-items:flex-start;gap:8px}
+.s-list li::before{content:'—';color:var(--muted);flex-shrink:0}
+.str-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:48px}
+.str-card{border-radius:12px;padding:26px 22px;box-shadow:0 1px 4px rgba(0,0,0,.06);transition:transform .2s var(--ease-out)}
+.str-card:hover{transform:translateY(-2px)}
+.str-card:nth-child(1){background:var(--str1)}.str-card:nth-child(2){background:var(--str2)}.str-card:nth-child(3){background:var(--str3)}.str-card:nth-child(4){background:var(--str4)}
+.str-dim{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.str-tagline{font-size:14px;font-style:italic;font-family:var(--serif);color:#333;margin-bottom:14px;line-height:1.4}
+.str-pills{display:flex;flex-wrap:wrap;gap:6px}
+.str-pill{font-size:11.5px;font-weight:500;background:rgba(255,255,255,.75);color:#444;border-radius:20px;padding:4px 10px}
+.wss-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;margin-bottom:52px}
+.wss-pill{font-size:12.5px;color:#444;border:1px solid var(--border);border-radius:20px;padding:5px 14px;background:var(--bg)}
+.cta-wrap{text-align:center}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--text);color:var(--white);font-size:14px;font-weight:500;padding:14px 32px;border-radius:8px;border:none;transition:opacity .15s var(--ease-out),transform .15s var(--ease-out),box-shadow .15s var(--ease-out);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.cta-btn:hover{opacity:.88;transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.cta-btn:active{transform:translateY(0);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+
+/* ════════ METHODOLOGY ════════ */
+.meth-hero{text-align:center;padding-bottom:56px;margin-bottom:56px;border-bottom:1px solid var(--border)}
+.meth-hero svg{display:block;margin:0 auto 20px}
+.meth-sub{font-size:15px;color:var(--muted);max-width:500px;margin:12px auto 0;line-height:1.7}
+.dt-row{display:grid;grid-template-columns:1fr 56px 1fr 56px 1fr;align-items:start;margin-bottom:0}
+.dt-node{position:relative}
+.dt-box{border:1.5px solid var(--border);border-radius:12px;padding:24px 20px;cursor:pointer;transition:border-color .18s var(--ease-out),background .18s var(--ease-out),box-shadow .18s var(--ease-out);background:var(--white)}
+.dt-box:hover{border-color:#bbb;background:var(--hover)}
+#dtBox1.active{border-color:#F57C00;background:#FFF8F0;box-shadow:0 0 0 3px rgba(245,124,0,.08)}
+#dtBox2.active{border-color:#1976D2;background:#F0F7FF;box-shadow:0 0 0 3px rgba(25,118,210,.08)}
+#dtBox3.active{border-color:#388E3C;background:#F0FAF0;box-shadow:0 0 0 3px rgba(56,142,60,.08)}
+.dt-step-num{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.dt-title{font-size:17px;font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
+.dt-question{font-size:13px;color:#555;line-height:1.5;font-style:italic}
+.dt-hint{display:block;font-size:11px;color:var(--muted);margin-top:12px;letter-spacing:.04em}
+.dt-box.active .dt-hint{color:var(--text);font-weight:600}
+.dt-connector{display:flex;align-items:flex-start;justify-content:center;padding-top:32px}
+.dt-arrow-icon{font-size:22px;color:#ccc;transition:color .25s var(--ease-out)}
+.dt-detail{background:var(--bg);border-radius:12px;padding:32px;margin-top:20px;display:none;border:1px solid var(--border)}
+.dt-detail.open{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.dt-d-rule{font-size:14.5px;line-height:1.75;color:#333}
+.dt-d-rule strong{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.dt-d-example{font-size:13.5px;line-height:1.7;color:#555;border-left:2px solid var(--border);padding-left:16px;font-style:italic}
+.dt-d-example strong{display:block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.wdd-section{border-top:1px solid var(--border);padding-top:56px;margin-top:56px}
+.wdd-intro{margin-bottom:32px}
+.wdd-intro .headline-md{margin-bottom:8px}
+.wdd-sub-text{font-size:14px;color:var(--muted);line-height:1.6}
+.wdd-row{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.wdd-col{border-right:1px solid var(--border);cursor:pointer;transition:background .15s}
+.wdd-col:last-child{border-right:none}
+.wdd-col:hover,.wdd-col.active{background:var(--hover)}
+.wdd-header{padding:24px 22px;display:flex;align-items:flex-start;gap:14px}
+.wdd-num{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:2px;flex-shrink:0}
+.wdd-title-wrap{flex:1}
+.wdd-h-title{font-size:15.5px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px}
+.wdd-metric{font-size:11.5px;font-weight:600;color:#555;background:var(--white);border:1px solid var(--border);border-radius:20px;padding:3px 10px;display:inline-flex}
+.wdd-toggle{font-size:16px;color:var(--muted);padding-top:2px;transition:transform .25s var(--ease-spring);flex-shrink:0}
+.wdd-col.active .wdd-toggle{transform:rotate(45deg)}
+.wdd-body{display:none;padding:16px 22px 22px;border-top:1px solid var(--border)}
+.wdd-body.open{display:block}
+.wdd-body p{font-size:13.5px;line-height:1.7;color:#333;margin-bottom:10px;margin-top:14px}
+.wdd-case{font-size:12.5px;font-style:italic;color:var(--muted);border-left:2px solid var(--border);padding-left:12px;margin-top:10px;line-height:1.6}
+
+/* ════════ WORK ════════ */
+.work-legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;align-items:center}
+.legend-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:12.5px;color:#444}
+.legend-dot{width:9px;height:9px;border-radius:3px;flex-shrink:0}
+.proj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.proj-card{border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.05);padding:20px 18px;cursor:pointer;transition:box-shadow .2s var(--ease-out),transform .2s var(--ease-out);display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden}
+.proj-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.12);transform:translateY(-2px)}
+.proj-card-overlay{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:flex-end;padding:12px;opacity:0;transition:opacity .2s var(--ease-out);pointer-events:none}
+.proj-card:hover .proj-card-overlay{opacity:1}
+.proj-card-cta{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#333;background:rgba(255,255,255,.88);padding:4px 10px;border-radius:4px;backdrop-filter:blur(4px)}
+.proj-icon svg{width:34px;height:34px;stroke:rgba(0,0,0,.45);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.proj-tags{display:flex;flex-wrap:wrap;gap:4px}
+.proj-tag{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.6);color:#555;border-radius:4px;padding:2px 7px}
+.proj-title{font-size:14px;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.proj-oneliner{font-size:12px;color:#555;line-height:1.55}
+.proj-metric{margin-top:auto;padding-top:10px;border-top:1px solid rgba(0,0,0,.06)}
+.proj-mv{font-size:18px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.proj-ml{font-size:11px;color:var(--muted);margin-top:2px}
+
+/* ── Modal ── */
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:999;align-items:flex-start;justify-content:center;padding:32px 24px;overflow-y:auto;opacity:0;transition:opacity .2s var(--ease-out)}
+.modal-backdrop.open{display:flex;opacity:1}
+.modal{background:var(--white);border-radius:16px;width:100%;max-width:820px;box-shadow:0 24px 64px rgba(0,0,0,.22);animation:modalIn .45s var(--ease-out) both;margin:auto}
+@keyframes modalIn{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:none}}
+.modal-head{padding:26px 30px 20px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:16px}
+.modal-htxt{flex:1}
+.modal-htitle{font-size:19px;font-weight:600;letter-spacing:-.02em;margin-bottom:6px}
+.modal-meta{display:flex;flex-wrap:wrap;gap:5px}
+.modal-tag{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:3px 7px;color:#555}
+.modal-close{background:none;border:none;font-size:20px;color:var(--muted);padding:8px;line-height:1;flex-shrink:0;border-radius:8px;transition:background .15s var(--ease-out),color .15s var(--ease-out)}
+.modal-close:hover{color:var(--text);background:var(--hover)}
+.modal-body{padding:26px 30px}
+
+/* Flow viz */
+.flow-viz{display:grid;grid-template-columns:1fr 28px 1fr 28px 1fr;gap:0;margin-bottom:22px}
+.flow-box{background:var(--bg);border-radius:10px;padding:16px 14px}
+.flow-lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.flow-pts{list-style:none;display:flex;flex-direction:column;gap:5px}
+.flow-pts li{font-size:12.5px;color:#333;line-height:1.5;padding-left:12px;position:relative}
+.flow-pts li::before{content:'·';position:absolute;left:0;color:var(--muted)}
+.flow-div{display:flex;align-items:center;justify-content:center;padding-top:38px;font-size:16px;color:#ccc}
+
+/* Metrics strip */
+.metrics-strip{display:flex;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:22px}
+.metric-box{flex:1;padding:16px 14px;text-align:center;border-right:1px solid var(--border)}
+.metric-box:last-child{border-right:none}
+.metric-big{font-size:20px;font-weight:700;letter-spacing:-.02em;line-height:1;margin-bottom:4px}
+.metric-lbl{font-size:11px;color:var(--muted)}
+
+/* ──────────────────────────────────────── */
+/*  DIAGRAM SYSTEM — MBB Credential Style  */
+/* ──────────────────────────────────────── */
+.diagram-wrap{border-top:1px solid var(--border);padding-top:20px}
+.diagram-title{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+
+/* TYPE A: Horizontal Bar Chart */
+.bar-chart{display:flex;flex-direction:column;gap:10px}
+.bar-row{display:grid;grid-template-columns:130px 1fr 52px;align-items:center;gap:10px}
+.bar-lbl{font-size:12px;color:#555;text-align:right}
+.bar-track{height:30px;background:#F0F0EE;border-radius:5px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:5px;display:flex;align-items:center;padding-left:12px;font-size:12px;font-weight:700;color:var(--white);min-width:40px;transition:width .6s var(--ease-out)}
+.bar-fill.c-red{background:var(--red)}
+.bar-fill.c-green{background:var(--green)}
+.bar-fill.c-amber{background:var(--amber)}
+.bar-val{font-size:12px;font-weight:700;color:#333}
+.bar-note{font-size:11.5px;font-style:italic;color:var(--muted);margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+
+/* TYPE B: Before/After Time Bars */
+.time-bar-wrap{display:flex;flex-direction:column;gap:14px}
+.time-bar-row{display:flex;flex-direction:column;gap:5px}
+.time-bar-state{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.time-bar-outer{position:relative;height:36px;background:#F0F0EE;border-radius:6px;overflow:hidden}
+.time-bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:14px;font-size:13px;font-weight:700;color:var(--white);transition:width .65s var(--ease-out)}
+.time-bar-fill.c-red{background:var(--red)}
+.time-bar-fill.c-green{background:var(--green)}
+.time-bar-fill.c-amber{background:var(--amber)}
+.time-bar-delta{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:11.5px;font-weight:700;color:#555}
+
+/* TYPE C: Mix Shift Stacked Bars */
+.mix-chart{display:flex;flex-direction:column;gap:10px}
+.mix-period-row{display:flex;align-items:center;gap:12px}
+.mix-period-lbl{font-size:11px;color:var(--muted);width:46px;flex-shrink:0;font-weight:600}
+.mix-bar{display:flex;height:30px;border-radius:6px;overflow:hidden;flex:1;gap:2px}
+.mix-seg{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--white);transition:width .5s ease;overflow:hidden;white-space:nowrap}
+.mix-legend{display:flex;gap:16px;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+.mix-leg-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#555}
+.mix-leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+
+/* TYPE D: Scoring Matrix */
+.score-matrix{display:flex;flex-direction:column;gap:3px}
+.score-header-row{display:flex;gap:3px;margin-bottom:2px}
+.score-corner{width:90px;flex-shrink:0}
+.score-header-cell{flex:1;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center;padding:4px}
+.score-data-row{display:flex;align-items:center;gap:3px}
+.score-market-lbl{width:90px;flex-shrink:0;font-size:12px;color:#333;font-weight:600;padding-right:8px}
+.score-cell{flex:1;padding:8px 4px;border-radius:5px;text-align:center;font-size:11.5px;font-weight:700;line-height:1.2}
+.score-cell.L{background:#FFCDD2;color:var(--red-text)}
+.score-cell.M{background:#FFF9C4;color:#F57F17}
+.score-cell.H{background:#C8E6C9;color:var(--green-text)}
+.score-data-row.winner .score-market-lbl{color:var(--green-text)}
+.score-data-row.winner .score-cell{outline:2px solid #A5D6A7}
+
+/* TYPE E: Phased Architecture */
+.phase-diagram{display:grid;align-items:start;gap:0}
+.phase-diagram.p3{grid-template-columns:1fr 32px 1fr 32px 1fr}
+.phase-diagram.p2{grid-template-columns:1fr 32px 1fr}
+.phase-box{background:var(--bg);border-radius:10px;padding:16px 14px;border:1px solid var(--border)}
+.phase-num{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.phase-title{font-size:13.5px;font-weight:600;margin-bottom:6px;letter-spacing:-.01em}
+.phase-desc{font-size:12px;color:#555;line-height:1.5}
+.phase-metric{font-size:13px;font-weight:700;color:var(--green-text);margin-top:10px;padding-top:8px;border-top:1px solid var(--border)}
+.phase-divider{display:flex;align-items:center;justify-content:center;padding-top:32px;font-size:18px;color:#ccc}
+
+/* TYPE F: Node / Causal Loop Diagram */
+.node-diagram{display:flex;flex-direction:column;gap:14px}
+.node-row{display:flex;align-items:center;gap:0;flex-wrap:nowrap;overflow-x:auto}
+.node-row-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;width:64px;flex-shrink:0;padding-right:8px;line-height:1.3}
+.node-row-label.bad{color:var(--red-text)}
+.node-row-label.good{color:var(--green-text)}
+.n-node{border-radius:8px;padding:7px 12px;font-size:12px;font-weight:500;white-space:nowrap;flex-shrink:0}
+.n-node.bad{background:var(--red-bg);color:var(--red-text);border:1px solid #EF9A9A}
+.n-node.good{background:var(--green-bg);color:var(--green-text);border:1px solid #A5D6A7}
+.n-node.neutral{background:#F5F5F0;color:#555;border:1px solid var(--border)}
+.n-edge{font-size:14px;color:#ccc;padding:0 5px;flex-shrink:0}
+.n-loop-close{font-size:11px;font-style:italic;color:var(--muted);padding:6px 12px;border-radius:6px;margin-left:8px;flex-shrink:0}
+.n-loop-close.bad{background:var(--red-bg);color:var(--red-text)}
+.n-loop-close.good{background:var(--green-bg);color:var(--green-text)}
+
+/* TYPE G: Callout Grid */
+.callout-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.callout-col{display:flex;flex-direction:column;gap:3px}
+.callout-col-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px;border-radius:6px;margin-bottom:2px;text-align:center}
+.callout-col-label.before-lbl{background:var(--red-bg);color:var(--red-text)}
+.callout-col-label.after-lbl{background:var(--green-bg);color:var(--green-text)}
+.callout-cell{border-radius:8px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.callout-cell.before{background:var(--red-bg);border:1px solid #EF9A9A}
+.callout-cell.after{background:var(--green-bg);border:1px solid #A5D6A7}
+.callout-val{font-size:26px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.callout-val.before{color:var(--red-text)}
+.callout-val.after{color:var(--green-text)}
+.callout-lbl{font-size:11.5px;color:#555;line-height:1.3}
+
+/* TYPE H: Funnel */
+.funnel-wrap{display:flex;flex-direction:column;align-items:center;gap:3px;width:100%}
+.funnel-stage{border-radius:5px;height:34px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:12px;font-weight:500}
+.funnel-stage.normal{background:#F5F5F0;color:#444}
+.funnel-stage.problem{background:var(--red-bg);color:var(--red-text);font-weight:700;border:1px solid #EF9A9A}
+.funnel-sublabel{font-size:10.5px;opacity:.8;margin-left:8px;font-style:italic;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+
+/* ════════ CONTACT ════════ */
+.contact-2col{display:grid;grid-template-columns:1.5fr 1fr;gap:72px;align-items:start}
+.contact-left{display:flex;flex-direction:column}
+.contact-right{padding-top:clamp(36px,4vw,56px)}
+.contact-intro{font-size:15px;color:#2a2a2a;line-height:1.8;margin:20px 0 16px}
+.contact-intro-body{font-size:15px;color:#2a2a2a;line-height:1.8;margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+.contact-intro-body p{margin-bottom:12px}.contact-intro-body p:last-child{margin-bottom:0}
+.contact-roles{margin-bottom:28px}
+.contact-roles p{font-size:13.5px;color:#333;line-height:1.65;margin-bottom:5px;margin-top:6px}
+.contact-links{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-top:4px}
+.contact-link-item{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#555;padding:8px 14px;border-radius:8px;transition:color .15s var(--ease-out),background .15s var(--ease-out)}
+.contact-link-item:hover{color:var(--accent);background:var(--accent-bg)}
+.contact-link-item svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.contact-link-sep{width:1px;height:14px;background:var(--border);flex-shrink:0;margin:0 2px}
+/* ── Contact Form Panel ── */
+.contact-form-panel{}
+.contact-form-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.contact-form-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.contact-form{display:flex;flex-direction:column;gap:10px}
+.contact-form input,.contact-form textarea{width:100%;font-family:var(--sans);font-size:13.5px;color:var(--text);background:var(--white);border:1px solid var(--border);border-radius:8px;padding:11px 14px;outline:none;transition:border-color .15s var(--ease-out),box-shadow .15s var(--ease-out);resize:none;line-height:1.6}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--muted)}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(232,101,10,.07)}
+.contact-form textarea{min-height:200px}
+.contact-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.contact-form-submit{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--white);font-family:var(--sans);font-size:13.5px;font-weight:500;padding:13px 24px;border-radius:8px;border:none;cursor:pointer;margin-top:4px;transition:opacity .15s var(--ease-out),transform .15s var(--ease-out)}
+.contact-form-submit:hover{opacity:.85;transform:translateY(-1px)}
+.contact-form-submit:active{transform:translateY(0)}
+.contact-form-success{display:none;font-size:13.5px;color:var(--green-text);background:var(--green-bg);border:1px solid #A5D6A7;border-radius:8px;padding:11px 14px;margin-top:4px}
+@media(max-width:900px){
+  .contact-2col{grid-template-columns:1fr;gap:40px}
+  .contact-right{position:static}
+}
+@media(max-width:600px){.contact-form-row{grid-template-columns:1fr}}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--border);padding:20px 32px;display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.footer-text{font-size:12px;color:var(--muted)}
+.footer-links{display:flex;align-items:center;gap:20px}
+.footer-link{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s var(--ease-out);position:relative}
+.footer-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--accent);transition:width .2s var(--ease-out)}
+.footer-link:hover{color:var(--accent)}
+.footer-link:hover::after{width:100%}
+.footer-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+/* ── Responsive ── */
+@media(max-width:960px){
+  .about-body{grid-template-columns:1fr;gap:32px}
+  .sidebar{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:28px}
+  .str-grid{grid-template-columns:1fr}
+  .proj-grid{grid-template-columns:repeat(2,1fr)}
+  .dt-row{grid-template-columns:1fr;gap:12px}
+  .dt-connector{display:none}
+  .dt-detail.open{grid-template-columns:1fr}
+  .wdd-row{grid-template-columns:1fr}
+  .wdd-col{border-right:none;border-bottom:1px solid var(--border)}
+  .wdd-col:last-child{border-bottom:none}
+  .contact-links{gap:4px}
+  .flow-viz{grid-template-columns:1fr;gap:8px}
+  .flow-div{display:none}
+  .phase-diagram.p3,.phase-diagram.p2{grid-template-columns:1fr;gap:8px}
+  .phase-divider{display:none}
+  .metrics-strip{flex-wrap:wrap}
+  .metric-box{min-width:50%;border-bottom:1px solid var(--border)}
+  .callout-grid{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:90px 1fr 44px}
+}
+@media(max-width:600px){
+  .nav-inner{padding:0 16px}
+  .nav-logo{display:none}
+  .nav-tabs{gap:0;justify-content:space-around;width:100%}
+  .nav-tab{font-size:12px;padding:6px 10px}
+  .shell{padding:40px 16px 72px}
+  .proj-grid{grid-template-columns:1fr}
+  .site-footer{padding:16px;flex-direction:column;gap:8px;align-items:flex-start}
+  .modal-body,.modal-head{padding:20px 22px}
+}
+
+/* ── Focus states ── */
+:focus-visible{outline:2px solid var(--text);outline-offset:2px;border-radius:4px}
+button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
+
+/* ── Reduced motion ── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+}
+
+/* ════════ NEW: Centered Nav ════════ */
+.nav-inner{max-width:1100px;margin:0 auto;padding:20px 32px 0;height:auto;display:flex;flex-direction:column;align-items:center;gap:0;justify-content:flex-start}
+.nav-logo{font-size:20px;font-weight:700;letter-spacing:-.03em;cursor:pointer;flex-shrink:0;margin-bottom:14px}
+.nav-divider{width:100%;height:1px;background:var(--border);margin-bottom:0}
+.nav-tabs{display:flex;align-items:center;gap:2px;position:relative;justify-content:center;padding:4px 0;width:100%}
+.nav-tab{font-size:13px;font-weight:450;white-space:nowrap}
+
+/* ════════ NEW: About hero additions ════════ */
+.hero-sub{font-size:15px;font-weight:400;color:var(--muted);margin:28px 0 28px;line-height:1.75}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}
+.cta-primary{background:var(--accent);color:var(--white);box-shadow:0 2px 8px rgba(232,101,10,.25)}
+.cta-secondary{display:inline-flex;align-items:center;gap:8px;background:none;color:var(--text);border:1.5px solid var(--border);font-size:14px;font-weight:500;padding:14px 32px;border-radius:8px;cursor:pointer;transition:border-color .15s var(--ease-out),background .15s var(--ease-out);text-decoration:none}
+.cta-secondary:hover{border-color:var(--text);background:var(--hover)}
+
+/* ════════ NEW: Testimonial Slider ════════ */
+.testimonial-wrap{margin:32px 0 8px;border-radius:16px;border:1px solid var(--border);overflow:hidden;cursor:grab;user-select:none}
+.testimonial-wrap:active{cursor:grabbing}
+.testimonial-track{display:flex;transition:transform .42s var(--ease-out);will-change:transform}
+.testimonial-slide{min-width:100%;flex-shrink:0;padding:44px 56px;text-align:center;background:var(--bg)}
+.testimonial-quote{font-size:clamp(18px,2.2vw,24px);font-family:var(--serif);font-style:italic;color:var(--text);line-height:1.45;margin-bottom:28px}
+.testimonial-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.testimonial-tag{font-size:12px;font-weight:500;background:rgba(255,255,255,.75);border:1px solid var(--border);border-radius:20px;padding:4px 12px;color:#444}
+.testimonial-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px;margin-bottom:48px}
+.t-btn{background:none;border:1.5px solid var(--border);border-radius:8px;width:36px;height:36px;cursor:pointer;color:var(--muted);font-size:15px;display:flex;align-items:center;justify-content:center;transition:border-color .15s var(--ease-out),color .15s var(--ease-out)}
+.t-btn:hover{border-color:var(--text);color:var(--text)}
+.t-dots{display:flex;gap:6px}
+.t-dot{width:6px;height:6px;border-radius:50%;background:var(--border);cursor:pointer;transition:background .2s,transform .2s}
+.t-dot.active{background:var(--accent);transform:scale(1.4)}
+
+/* ════════ NEW: Superpowers ════════ */
+.sp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.sp-card{padding:36px 32px;display:flex;flex-direction:column;background:var(--bg);transition:background .2s var(--ease-out);position:relative;overflow:hidden}
+.sp-card:not(:last-child){border-right:1px solid var(--border)}
+.sp-card:hover{background:var(--white)}
+.sp-watermark{font-family:var(--serif);font-size:130px;font-weight:400;color:var(--text);opacity:.04;line-height:1;position:absolute;top:8px;right:16px;pointer-events:none;letter-spacing:-.04em;user-select:none}
+.sp-num-label{font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:20px;display:block}
+.sp-title{font-family:var(--serif);font-size:22px;font-weight:400;letter-spacing:-.02em;margin-bottom:16px;line-height:1.2}
+.sp-body{font-size:14px;color:var(--text-body);line-height:1.75;flex:1}
+.sp-proof{font-size:13px;font-weight:400;color:var(--text-body);line-height:1.55;margin-top:0}
+
+/* ════════ NEW: Filter buttons ════════ */
+.filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filter-btn{font-size:12px;font-weight:600;border:1.5px solid var(--border);border-radius:20px;padding:6px 16px;background:none;cursor:pointer;color:var(--muted);transition:all .15s var(--ease-out)}
+.filter-btn:hover{border-color:var(--text);color:var(--text)}
+.filter-btn.active{background:var(--accent);color:var(--white);border-color:var(--accent)}
+
+/* ════════ NEW: Project card category badge ════════ */
+.proj-cat-row{margin-bottom:4px}
+.proj-cat-badge{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:rgba(0,0,0,.08);color:#444}
+
+/* ════════ NEW: Tech Stack skill tags ════════ */
+.tech-cols{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:52px;padding-bottom:52px;border-bottom:1px solid var(--border)}
+.skill-stack{display:flex;flex-direction:column;gap:36px;margin-bottom:52px;padding-bottom:52px;border-bottom:1px solid var(--border)}
+.skill-group{display:flex;flex-direction:column;gap:0}
+.sp-metric{margin-top:28px;margin-bottom:4px;display:flex;align-items:baseline;gap:10px}
+.sp-metric::before{content:'';display:block;width:20px;height:1.5px;background:var(--accent);flex-shrink:0;position:relative;top:-5px;opacity:.7}
+.sp-metric-val{font-family:var(--serif);font-size:16px;font-weight:400;font-style:italic;color:var(--accent);letter-spacing:.01em;line-height:1}
+.skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.skill-tag{font-size:13px;font-weight:500;border:1px solid var(--border);border-radius:20px;padding:6px 14px;background:var(--bg);cursor:default;position:relative;transition:border-color .15s var(--ease-out),background .15s var(--ease-out)}
+.skill-tag:hover{border-color:var(--text);background:var(--white)}
+.skill-tooltip{display:none;position:absolute;bottom:calc(100% + 10px);left:0;transform:none;background:#fff;color:#333;font-size:12px;line-height:1.6;padding:12px 16px;border-radius:10px;width:290px;z-index:300;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,.1);border:1px solid #e0ddd7}
+.skill-tooltip::after{content:'';position:absolute;top:100%;left:20px;right:auto;transform:none;border:6px solid transparent;border-top-color:#e0ddd7}
+.skill-tooltip::before{content:'';position:absolute;top:100%;left:21px;right:auto;transform:none;border:5px solid transparent;border-top-color:#fff;z-index:1}
+.skill-tooltip.tip-right::after{left:auto;right:20px}
+.skill-tooltip.tip-right::before{left:auto;right:21px}
+@keyframes tipFade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.skill-tag:hover .skill-tooltip{display:block;animation:tipFade .15s var(--ease-out) both}
+.tech-industry-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.industry-pill{font-size:12.5px;color:#444;border:1px solid var(--border);border-radius:20px;padding:5px 14px;background:var(--bg)}
+.meth-divider{border-top:1px solid var(--border);padding-top:56px;margin-top:56px}
+
+/* ════════ RESPONSIVE OVERRIDES ════════ */
+@media(max-width:960px){
+  .sp-grid{grid-template-columns:1fr}
+  .sp-card:not(:last-child){border-right:none;border-bottom:1px solid var(--border)}
+  .tech-cols{grid-template-columns:1fr;gap:32px}
+  .nav-inner{padding:16px 16px 0}
+  .contact-cards{grid-template-columns:repeat(2,1fr)!important}
+}
+@media(max-width:600px){
+  .nav-inner{padding:14px 16px 0}
+  .nav-logo{font-size:17px;margin-bottom:10px}
+  .nav-tab{font-size:11px;padding:5px 8px}
+  .testimonial-slide{padding:28px 20px}
+  .sp-card{padding:24px 20px}
+  /* Hero */
+  .about-hero{padding-bottom:36px;margin-bottom:36px}
+  .hero-cta{flex-direction:column;gap:10px}
+  .cta-btn,.cta-primary,.cta-secondary{width:100%;justify-content:center}
+  /* Sidebar */
+  .str-grid{grid-template-columns:1fr 1fr}
+  /* Contact */
+  .contact-links{gap:2px}
+  .contact-wrap{max-width:100%}
+  /* Modal full-width */
+  .modal-backdrop{padding:0}
+  .modal{border-radius:12px 12px 0 0;margin-top:auto;max-height:90vh;overflow-y:auto}
+  .modal-body,.modal-head{padding:18px 18px}
+  /* Metric boxes */
+  .metric-box{min-width:50%}
+  /* Footer */
+  .footer-links{flex-wrap:wrap;gap:12px}
+  /* Shell */
+  .shell{padding:32px 16px 60px}
+  /* Skill tooltips: disable on mobile (touch devices) */
+  .skill-tooltip{display:none!important}
+  /* Tech stack */
+  .skill-stack{gap:24px;margin-bottom:36px;padding-bottom:36px}
+  .meth-divider{padding-top:36px;margin-top:36px}
+}
+@media(max-width:420px){
+  .nav-tab{font-size:10px;padding:4px 6px;letter-spacing:-.01em}
+  .contact-links{flex-direction:row;flex-wrap:wrap}.contact-link-sep{display:none}
+  .str-grid{grid-template-columns:1fr}
+  .hero-cta{margin-top:28px}
+  .proj-grid{grid-template-columns:1fr}
+}
+
+/* ── Focus states ── */
+:focus-visible{outline:2px solid var(--text);outline-offset:2px;border-radius:4px}
+button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
+
+/* ── Reduced motion ── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <span class="nav-logo" onclick="switchTab('about')">Yue Guo</span>
+    <div class="nav-divider"></div>
+    <div class="nav-tabs" id="navTabs">
+      <button class="nav-tab active" data-tab="about">About</button>
+      <button class="nav-tab" data-tab="superpowers">Superpowers</button>
+      <button class="nav-tab" data-tab="work">Featured Works</button>
+      <button class="nav-tab" data-tab="techstack">Tech Stack &amp; Methodology</button>
+      <button class="nav-tab" data-tab="contact">Contact</button>
+      <div class="nav-indicator" id="navIndicator"></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════ ABOUT ════════ -->
+<section id="tab-about" class="tab-section active"><div class="shell">
+  <div class="about-hero">
+    <p class="eyebrow">Product &amp; Technical Program Manager</p>
+    <h1 class="headline-xl">I don't build features.<br>I redesign the <em>rules</em> underneath them.</h1>
+    <p class="hero-sub">9+ years across fintech startups, insurance platforms, and enterprise delivery &mdash;<br>at the intersection of product strategy, technical coordination, and cross-functional alignment.</p>
+  </div>
+  <div class="about-body">
+    <div class="prose">
+      <p>Over 9 years in fintech, insurance, and enterprise platforms, I&#8217;ve built a career in the environments most PMs avoid &#8212; heavily regulated, multi-stakeholder, structurally broken. The kind where the real problem is never the stated problem.</p>
+      <p>A few examples: At Ping An, I turned a market the industry had written off as uninsurable into a $2M product &#8212; not by taking on more risk, but by redesigning the incentive structure underneath it. At Accenture, I broke a three-continent stakeholder deadlock by stopping trying to persuade anyone and instead redesigning the rules &#8212; a tiered rollout architecture that let both sides win, later adopted as Discovery&#8217;s global emerging market standard. And when I spotted an untouched gap in a client&#8217;s claims workflow, I built the ROI case myself, assembled the team, and shipped an NLP solution in 8 weeks with $420K in projected annual savings &#8212; with zero mandate at the start.</p>
+      <p>What I bring that&#8217;s harder to find: business model intuition built on unit economics and risk modeling; technical depth in SQL, Python, and ML implementation that I use to find leverage, not just describe requirements; and a consistent track record of identifying opportunities no one asked me to find &#8212; then driving them to results.</p>
+      <p>If the problem looks impossible, that&#8217;s usually where I start.</p>
+    </div>
+    <aside class="sidebar">
+      <div class="s-block">
+        <p class="s-lbl">Industries</p>
+        <ul class="s-list"><li>Fintech &amp; Lending Platforms</li><li>Health &amp; Chronic Disease Insurance</li><li>Group Risk &amp; Financial Services</li><li>Enterprise Platform Delivery</li><li>Healthcare Provider &amp; Payer</li><li>Strategy Consulting</li></ul>
+      </div>
+    </aside>
+  </div>
+  <div class="testimonial-wrap" id="tWrap">
+    <div class="testimonial-track" id="tTrack"></div>
+  </div>
+  <div class="testimonial-nav">
+    <button class="t-btn" onclick="tPrev()">&#8592;</button>
+    <div class="t-dots" id="tDots"></div>
+    <button class="t-btn" onclick="tNext()">&#8594;</button>
+  </div>
+  <div class="hero-cta">
+    <button class="cta-btn cta-primary" onclick="switchTab('work')">View My Work &#8595;</button>
+    <a href="Yue Guo Resume.pdf" download="Yue Guo Resume.pdf" class="cta-secondary">Download Resume</a>
+  </div>
+</div></section>
+
+<!-- ════════ SUPERPOWERS ════════ -->
+<section id="tab-superpowers" class="tab-section"><div class="shell">
+  <div class="about-hero">
+    <h2 class="headline-md" style="font-style:italic">What I do differently</h2>
+    <p class="section-desc">Three capabilities that appear frequently on job descriptions. What they look like when I do them is different.</p>
+  </div>
+  <div class="sp-grid" id="spGrid"></div>
+</div></section>
+
+<!-- ════════ WORK ════════ -->
+<section id="tab-work" class="tab-section"><div class="shell">
+  <div style="margin-bottom:32px">
+    <h2 class="headline-md" style="margin-bottom:8px;font-style:italic">Featured Works</h2>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:24px">My projects span fintech, insurance, and enterprise platforms &#8212; different industries, different constraints, one throughline: systems thinking at the intersection of product strategy, cross-functional delivery, and data. Click any card to see the full breakdown.</p>
+  </div>
+  <div class="filter-row" id="filterRow"></div>
+  <div class="proj-grid" id="projGrid"></div>
+</div></section>
+
+<!-- ════════ TECH STACK & METHODOLOGY ════════ -->
+<section id="tab-techstack" class="tab-section"><div class="shell">
+  <div class="about-hero">
+    <h2 class="headline-md" style="font-style:italic">How I Work</h2>
+    <p class="section-desc">Tools, methods, and the thinking behind them.</p>
+  </div>
+  <div class="skill-stack">
+    <div class="skill-group">
+      <p class="sec-label">Product &amp; Business</p>
+      <div class="skill-tags">
+        <div class="skill-tag">0-to-1 Launch<span class="skill-tooltip">I led the launch of chronic disease insurance for diabetic patients at Ping An &#8212; a segment most insurers had written off as uninsurable. 10,000+ policies in month one, $2M first-year revenue, delivered in 6 months.</span></div>
+        <div class="skill-tag">MVP Scoping<span class="skill-tooltip">I used a value-vs-complexity lens to scope the NLP claims MVP: extraction and routing first. Launched in 8 weeks, proved value, and earned an expanded mandate &#8212; $420K in projected annual savings.</span></div>
+        <div class="skill-tag">Roadmap Prioritization<span class="skill-tooltip">I structured roadmaps across NLP automation, insurance product, and securities core &#8212; balancing business impact, technical dependency, and compliance requirements across multi-team delivery.</span></div>
+        <div class="skill-tag">Dynamic Pricing<span class="skill-tooltip">I designed a behavior-linked pricing model for chronic disease insurance that rewarded low-risk behaviors with premium discounts up to 10% &#8212; reducing claims frequency and increasing patient engagement.</span></div>
+        <div class="skill-tag">Risk Modeling<span class="skill-tooltip">I analyzed 50,000+ patient behavior records, identified signals correlated with lower claims, and built the statistical model that underpinned pricing and care incentive design.</span></div>
+        <div class="skill-tag">Unit Economics<span class="skill-tooltip">I applied unit economics discipline across fintech (caught CAC at $45 vs. $15 target), insurance (claims cost modeling), and consulting &#8212; always asking: does this model actually work at scale?</span></div>
+        <div class="skill-tag">P&amp;L Modeling<span class="skill-tooltip">I built P&amp;L models for insurance product pricing, consulting transformation ROI, and TikTok CPA-vs-CPM channel profitability &#8212; translating model assumptions into executive-ready trade-off decisions.</span></div>
+        <div class="skill-tag">Financial Stress Testing<span class="skill-tooltip">I analyzed a claims-above-forecast scenario for the chronic disease insurance product, identified behavioral correlates, and restructured the pricing model to restore margin under the downside case.</span></div>
+      </div>
+    </div>
+    <div class="skill-group">
+      <p class="sec-label">Data &amp; Analytics</p>
+      <div class="skill-tags">
+        <div class="skill-tag">SQL &middot; Python<span class="skill-tooltip">I used SQL and Python to analyze acquisition-channel performance at Accenture &#8212; surfacing a high-churn channel the client couldn&#8217;t see, and driving budget reallocation that improved ROI by ~20%.</span></div>
+        <div class="skill-tag">Cohort Analysis<span class="skill-tooltip">I segmented insurance customers by acquisition channel and surfaced a 6-month retention gap traced to a Day-1 ad copy mismatch &#8212; fixed the promise, not the product, and recovered +15% retention.</span></div>
+        <div class="skill-tag">A/B Testing<span class="skill-tooltip">I ran TikTok ad creative and insurance entry-point experiments across fintech and insurtech &#8212; improving conversion rates and lowering CAC across multiple acquisition channels.</span></div>
+        <div class="skill-tag">Funnel Analysis<span class="skill-tooltip">I diagnosed 70% cart abandonment for an e-commerce client through a segment-level funnel breakdown &#8212; identified registration friction and payment gaps, then led checkout redesign and installment launch.</span></div>
+        <div class="skill-tag">LTV/CAC Modeling<span class="skill-tooltip">I caught a CAC of $45 vs. a $15 projection at my fintech startup, modeled LTV/CAC break-even, and led the B2C&#8594;B2B pivot that brought us to positive cash flow in under 12 months.</span></div>
+        <div class="skill-tag">Sensitivity Analysis<span class="skill-tooltip">I built a CPA-vs-CPM sensitivity model for TikTok-based credit card acquisition to simultaneously optimize approval rates, CAC, and profitability across campaign configurations.</span></div>
+        <div class="skill-tag">Tableau &middot; BI Dashboard<span class="skill-tooltip">I built a data mart that unified clickstream, social sentiment, reviews, and order history &#8212; giving the product team a single source of truth for prioritization and decision-making.</span></div>
+      </div>
+    </div>
+    <div class="skill-group">
+      <p class="sec-label">Program Management</p>
+      <div class="skill-tags">
+        <div class="skill-tag">Stakeholder Alignment<span class="skill-tooltip">I aligned actuarial, engineering, underwriting, claims, sales, marketing, and hospital partners across the chronic disease insurance launch &#8212; delivering in 6 months despite competing priorities across every function.</span></div>
+        <div class="skill-tag">Influencing Without Authority<span class="skill-tooltip">I led co-founders to shift acquisition strategy from offline to WeChat using a 50/50 budget experiment &#8212; digital grew to 80% of business in 3 years, without a formal mandate to change direction.</span></div>
+        <div class="skill-tag">Conflict Resolution<span class="skill-tooltip">I addressed simultaneous pushback from sales, engineering, and finance during the insurance product launch &#8212; targeting each concern with evidence and phased planning, turning resistance into alignment.</span></div>
+        <div class="skill-tag">Handling Ambiguity<span class="skill-tooltip">I built hypothesis-driven frameworks to make progress when data was fragmented and direction unclear &#8212; applying this across startup pivots, market expansion planning, and unsolicited AI initiative scoping.</span></div>
+        <div class="skill-tag">Strategic Trade-offs<span class="skill-tooltip">I made explicit trade-off decisions across three contexts: B2C&#8594;B2B pivot economics, insurance pricing precision vs. launch speed, and AI accuracy vs. rollout trust &#8212; always anchored to the most critical business variable at that moment.</span></div>
+        <div class="skill-tag">Agile Delivery<span class="skill-tooltip">I managed 200+ Jira stories across multiple epics, structured sprint planning and backlog grooming, and kept cross-functional teams aligned on priorities and delivery timelines.</span></div>
+        <div class="skill-tag">Ownership &amp; Resilience<span class="skill-tooltip">I owned the B2C&#8594;B2B pivot decision at my fintech startup &#8212; recognized the model was wrong early, led the reframe, and brought the business to positive cash flow in under 12 months.</span></div>
+      </div>
+    </div>
+    <div class="skill-group">
+      <p class="sec-label">AI Stacks</p>
+      <div class="skill-tags">
+        <div class="skill-tag">NLP &middot; OCR Automation<span class="skill-tooltip">I led NLP and OCR claims automation at Accenture: 70% processing time reduction, wait time 7&#8594;2.5 days, $420K annual savings. I scoped and launched the MVP in 8 weeks using phased rollout and confidence thresholds.</span></div>
+        <div class="skill-tag">Technical Bridge<span class="skill-tooltip">I translated insurance workflows, financial logic, and compliance rules into user stories and technical requirements &#8212; keeping engineering and business stakeholders fully aligned throughout delivery.</span></div>
+        <div class="skill-tag">Data Infrastructure<span class="skill-tooltip">I built a customer data mart unifying clickstream, social sentiment, reviews, and order history &#8212; creating a single source of truth that enabled faster, more confident product and analytical decisions.</span></div>
+        <div class="skill-tag">API &amp; System Integration<span class="skill-tooltip">I designed app-to-insurance-system handoffs and integrated NLP model outputs into claims routing and real-time status tracking &#8212; ensuring workflow continuity across partner systems.</span></div>
+        <div class="skill-tag">AI Product Sense<span class="skill-tooltip">I&#8217;ve built GenAI prototypes &#8212; a fridge meal planner and a voice story app &#8212; to develop hands-on intuition for prompting, feedback loops, and trust design. I see AI as a multiplier for strong product thinking, not a standalone skill.</span></div>
+        <div class="skill-tag">Process Automation<span class="skill-tooltip">I scope and validate AI/automation MVPs using phased rollout, confidence thresholds, and stakeholder trust-building &#8212; because successful AI implementation depends as much on workflow design as model quality.</span></div>
+        <div class="skill-tag">Fintech Technical Depth<span class="skill-tooltip">I&#8217;m fluent across pricing logic, claims rules, credit approval funnels, and risk systems &#8212; the operational layer that determines whether a fintech product actually works at scale.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="meth-divider">
+    <div class="meth-hero" style="text-align:center;padding-bottom:40px;margin-bottom:40px;border-bottom:1px solid var(--border)">
+      <h2 class="headline-md">Decision Framework</h2>
+      <p class="meth-sub">A repeatable three-step sequence I apply at the start of any structurally complex problem. Click each step to explore.</p>
+    </div>
+    <div class="dt-row" id="dtRow">
+      <div class="dt-node"><div class="dt-box active" id="dtBox1" onclick="activateDt(1)"><p class="dt-step-num">Step 01</p><h3 class="dt-title">Diagnose</h3><p class="dt-question">&#8220;What is the one assumption, if wrong, that makes every other analysis irrelevant?&#8221;</p><span class="dt-hint">&#8595; Active</span></div></div>
+      <div class="dt-connector"><span class="dt-arrow-icon lit" id="dtArrow1">&#8594;</span></div>
+      <div class="dt-node"><div class="dt-box" id="dtBox2" onclick="activateDt(2)"><p class="dt-step-num">Step 02</p><h3 class="dt-title">Reframe</h3><p class="dt-question">&#8220;What problem are we actually trying to solve?&#8221;</p><span class="dt-hint">Click to explore &#8594;</span></div></div>
+      <div class="dt-connector"><span class="dt-arrow-icon" id="dtArrow2">&#8594;</span></div>
+      <div class="dt-node"><div class="dt-box" id="dtBox3" onclick="activateDt(3)"><p class="dt-step-num">Step 03</p><h3 class="dt-title">System Design</h3><p class="dt-question">&#8220;How do we change the incentive architecture so the right behavior becomes obvious?&#8221;</p><span class="dt-hint">Click to explore &#8594;</span></div></div>
+    </div>
+    <div class="dt-detail open" id="dtDetail">
+      <div id="dtDetailRule" class="dt-d-rule"></div>
+      <div id="dtDetailExample" class="dt-d-example"></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ════════ CONTACT ════════ -->
+<section id="tab-contact" class="tab-section"><div class="shell">
+  <div class="contact-2col">
+
+    <!-- LEFT: Info -->
+    <div class="contact-left">
+      <h2 class="headline-md" style="font-style:italic">Let&#8217;s Talk</h2>
+      <p class="contact-intro"><strong>If you&#8217;re building something in a space where complexity is the product &#8212;</strong></p>
+      <div class="contact-intro-body">
+        <p>I&#8217;m currently exploring PM and TPgM opportunities at companies operating at the intersection of data systems, financial platforms, and product infrastructure.</p>
+        <p>If your team is building from the ground up in a space that requires both strategic judgment and hands-on execution, let&#8217;s connect.</p>
+      </div>
+      <div class="contact-roles">
+        <p class="s-lbl">Currently Open To</p>
+        <p>Product Manager &#8212; Financial Services &middot; Insurance &middot; Enterprise Infrastructure</p>
+        <p>Technical Program Manager &#8212; Platform Delivery &middot; Workflow Automation &middot; Reporting &middot; Complex&nbsp;Systems</p>
+        <p style="margin-top:12px;font-size:13px;color:var(--muted)">Prefer roles in Seattle &middot; San Francisco &middot; New York &middot; Remote</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:jane.guoyue@gmail.com" class="contact-link-item"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>Email</a>
+        <span class="contact-link-sep"></span>
+        <a href="https://linkedin.com/in/yue-guo18" target="_blank" class="contact-link-item"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 10v7"/></svg>LinkedIn</a>
+        <span class="contact-link-sep"></span>
+        <a href="https://github.com/yueg18" target="_blank" class="contact-link-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
+        <span class="contact-link-sep"></span>
+        <a href="Yue Guo Resume.pdf" download="Yue Guo Resume.pdf" class="contact-link-item"><svg viewBox="0 0 24 24"><path d="M12 2v14m0 0-4-4m4 4 4-4M2 19h20"/></svg>Resume</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Form -->
+    <div class="contact-right">
+      <div class="contact-form-panel">
+        <span class="contact-form-label">Send me a message</span>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xykbdoqz" method="POST">
+          <textarea name="message" placeholder="Have a role, a product challenge, or just want to connect? Tell me what you're working on. I'll get back to you soon." required></textarea>
+          <div class="contact-form-row">
+            <input type="text" name="name" placeholder="Your name" autocomplete="name">
+            <input type="email" name="email" placeholder="Your email" required autocomplete="email">
+          </div>
+          <input type="hidden" name="_subject" value="New message from yueguo.com">
+          <button type="submit" class="contact-form-submit">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<!-- Modal -->
+<div class="modal-backdrop" id="modalBackdrop" onclick="closeModalOnBackdrop(event)">
+  <div class="modal" id="modalBox">
+    <div class="modal-head">
+      <div class="modal-htxt"><h3 class="modal-htitle" id="mTitle"></h3><div class="modal-meta" id="mMeta"></div></div>
+      <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div class="modal-body">
+      <div class="flow-viz" id="mFlow"></div>
+      <div class="metrics-strip" id="mMetrics"></div>
+      <div class="diagram-wrap" id="mDiagram"></div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span class="footer-text">Yue Guo &middot; Product &amp; Technical Program Manager</span>
+  <div class="footer-links">
+    <a href="mailto:jane.guoyue@gmail.com" class="footer-link"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>Email</a>
+    <a href="https://linkedin.com/in/yue-guo18" target="_blank" class="footer-link"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 10v7"/></svg>LinkedIn</a>
+    <a href="https://github.com/yueg18" target="_blank" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
+    <a href="Yue Guo Resume.pdf" download="Yue Guo Resume.pdf" class="footer-link"><svg viewBox="0 0 24 24"><path d="M12 2v14m0 0-4-4m4 4 4-4M2 19h20"/></svg>Resume</a>
+  </div>
+</footer>
+
+<script>
+/* ── Testimonial Data ── */
+const TESTIMONIALS=[
+  {quote:'"She sees one level deeper than the stated problem"',tags:['Structural Problem Solver','Business Model Architect','Leverage Point Identification','Incentive Structure Design']},
+  {quote:'"She doesn\u2019t wait for permission \u2014 manufactures it"',tags:['Manufactured Mandate','Data-as-Persuasion','MVP-First Execution','Bias for Action Under Ambiguity']},
+  {quote:'"She solves people problems, not just technical ones"',tags:['Deadlock Breaker','Third Option Designer','Influencing Without Authority','Cross-Cultural Navigation']},
+  {quote:'"She is technical enough to build leverage, not just translate"',tags:['Business-Technical Bridge','Applied AI/ML PM','Financial Systems Depth','Data Infrastructure Ownership']}
+];
+
+/* ── Testimonial Logic ── */
+let tIdx=0,tTimer;
+function buildTestimonials(){
+  document.getElementById('tTrack').innerHTML=TESTIMONIALS.map(t=>
+    `<div class="testimonial-slide"><p class="testimonial-quote">${t.quote}</p><div class="testimonial-tags">${t.tags.map(g=>`<span class="testimonial-tag">${g}</span>`).join('')}</div></div>`
+  ).join('');
+  document.getElementById('tDots').innerHTML=TESTIMONIALS.map((_,i)=>
+    `<div class="t-dot${i===0?' active':''}" onclick="tGo(${i})"></div>`
+  ).join('');
+  const wrap=document.getElementById('tWrap');
+  wrap.addEventListener('mouseenter',tStopAuto);
+  wrap.addEventListener('mouseleave',tStartAuto);
+}
+function tGo(n){
+  tIdx=(n+TESTIMONIALS.length)%TESTIMONIALS.length;
+  document.getElementById('tTrack').style.transform=`translateX(-${tIdx*100}%)`;
+  document.querySelectorAll('.t-dot').forEach((d,i)=>d.classList.toggle('active',i===tIdx));
+}
+function tAddDrag(){
+  const wrap=document.getElementById('tWrap');
+  let startX=0,isDragging=false;
+  // Touch
+  wrap.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;tStopAuto();},{passive:true});
+  wrap.addEventListener('touchend',e=>{
+    const diff=startX-e.changedTouches[0].clientX;
+    if(Math.abs(diff)>40){diff>0?tNext():tPrev();}else{tGo(tIdx);}
+    tStartAuto();
+  },{passive:true});
+  // Mouse drag
+  wrap.addEventListener('mousedown',e=>{isDragging=true;startX=e.clientX;tStopAuto();});
+  wrap.addEventListener('mouseup',e=>{
+    if(!isDragging)return;isDragging=false;
+    const diff=startX-e.clientX;
+    if(Math.abs(diff)>40){diff>0?tNext():tPrev();}
+    tStartAuto();
+  });
+  wrap.addEventListener('mouseleave',()=>{if(isDragging){isDragging=false;tStartAuto();}});
+}
+function tNext(){tGo(tIdx+1);}
+function tPrev(){tGo(tIdx-1);}
+function tStartAuto(){tTimer=setInterval(tNext,5000);}
+function tStopAuto(){clearInterval(tTimer);}
+
+/* ── Superpowers Data ── */
+const SUPERPOWERS=[
+  {icon:'⚙',title:'Business Model Intuition',metric:'$2M revenue',
+   proof:'Turned a market the entire insurance industry had abandoned into $2M in year-one revenue \u2014 by fixing the incentive structure, not the product.',
+   body:'I don\u2019t optimize at the feature level. I ask why the economics of a system are broken in the first place. At Ping An, fee-for-service contracts caused unpredictable claims costs for diabetic patients \u2014 so I redesigned the care model before writing a single product spec. The product sold 10,000+ policies in its first month.'},
+  {icon:'♟',title:'Deadlock Architecture',metric:'Adopted globally',
+   proof:'Broke a two-year institutional deadlock between South Africa and China \u2014 delivered in 6 months. The solution became a global standard.',
+   body:'When stakeholders are structurally opposed, persuasion doesn\u2019t work \u2014 design does. For the Ping An \u00d7 Discovery Vitality rollout, I built a three-tier modular hospital architecture that let both sides win without compromising their core requirements. Discovery adopted the model as their playbook for every emerging market entry since.'},
+  {icon:'⚡',title:'Manufactured Mandate',metric:'$420K Operational Savings',
+   proof:'Built an AI claims automation system nobody asked for. $420K in annual savings. 8 weeks from idea to live product.',
+   body:'I don\u2019t wait to be handed a problem. At Accenture, I identified a workflow bottleneck the client couldn\u2019t see, built the ROI case from scratch, recruited a cross-functional squad, and delivered an NLP/OCR MVP in 8 weeks \u2014 cutting wait time from 7 days to 2.5. It became the client\u2019s flagship AI reference case.'}
+];
+
+function buildSuperpowers(){
+  document.getElementById('spGrid').innerHTML=SUPERPOWERS.map((s,i)=>
+    `<div class="sp-card"><div class="sp-watermark">0${i+1}</div><span class="sp-num-label">0${i+1}</span><div class="sp-title">${s.title}</div><div class="sp-body">${s.body}</div><div class="sp-metric"><span class="sp-metric-val">${s.metric}</span></div><div class="sp-proof">${s.proof}</div></div>`
+  ).join('');
+}
+
+/* ── Filter Logic ── */
+const FILTERS=['All','0\u21921 Launch','AI/Automation','Business Model','Data Analysis','Leadership','Deadlock','Risk & Pricing'];
+function buildFilters(){
+  document.getElementById('filterRow').innerHTML=FILTERS.map(f=>
+    `<button class="filter-btn${f==='All'?' active':''}" data-filter="${f}" onclick="filterWork('${f}')">${f}</button>`
+  ).join('');
+}
+function filterWork(tag){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.filter===tag));
+  document.querySelectorAll('.proj-card').forEach(card=>{
+    const show=tag==='All'||(card.dataset.filters||'').includes(tag);
+    card.style.display=show?'flex':'none';
+  });
+}
+
+/* ── Tab switching + sliding indicator ── */
+const tabs=document.querySelectorAll('.nav-tab'),sections=document.querySelectorAll('.tab-section');
+const navIndicator=document.getElementById('navIndicator');
+function moveIndicator(activeEl){
+  if(!navIndicator||!activeEl)return;
+  const pRect=activeEl.parentElement.getBoundingClientRect();
+  const r=activeEl.getBoundingClientRect();
+  navIndicator.style.left=(r.left-pRect.left)+'px';
+  navIndicator.style.width=r.width+'px';
+}
+function switchTab(id){
+  tabs.forEach(t=>t.classList.toggle('active',t.dataset.tab===id));
+  sections.forEach(s=>s.classList.toggle('active',s.id==='tab-'+id));
+  const active=document.querySelector('.nav-tab.active');
+  if(active)moveIndicator(active);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>switchTab(t.dataset.tab)));
+requestAnimationFrame(()=>{const a=document.querySelector('.nav-tab.active');if(a)moveIndicator(a);});
+
+/* ── Decision Tree ── */
+const DT={1:{rule:`<strong>The Method</strong>Every complex problem has a small number of variables that actually determine the outcome. The rest is noise. Before building anything, I isolate the one structural assumption that — if wrong — makes every other analysis irrelevant. Speed in problem-solving comes from knowing what to ignore, not from analyzing more.`,example:`<strong>Case Evidence</strong>In the Uninsurable Market case, the load-bearing assumption was "high-risk patients are inherently expensive." Everyone in the industry had accepted this. It was wrong — the fee-for-service contract structure made them expensive. Identifying that single assumption changed everything. The product design followed naturally.`},2:{rule:`<strong>The Method</strong>Most organizational failures aren’t execution failures — they’re framing failures. Someone is solving the wrong problem with great discipline. My standard move in any stakeholder deadlock is to stop arguing within the inherited frame entirely and ask what problem we’re actually trying to solve. The answer is usually different for each party — and that difference is the key.`,example:`<strong>Case Evidence</strong>In the Three-Continent Deadlock, neither Discovery nor Ping An was wrong. Discovery was right about brand consistency. Ping An was right about competitive timing. They were arguing as if those goals were mutually exclusive — they weren’t. The solution wasn’t a compromise; it was a new architecture that made both problems solvable simultaneously.`},3:{rule:`<strong>The Method</strong>The best solutions don’t require people to change their behavior or act against their interests. They change the incentive architecture so the right behavior becomes the obvious choice. This is the difference between a solution and a workaround. A workaround requires someone to keep choosing it. A structural solution is self-sustaining regardless of who is in the room.`,example:`<strong>Case Evidence</strong>The Chronic Disease Insurance product didn’t ask hospitals to care more about patients. It changed the contract so caring about patients was financially optimal. Fixed management fees replaced fee-for-service. The incentive aligned. Claims stabilized. The product went from "uninsurable" to 10,000+ policies in month one.`}};
+const DT_ARROW_COLORS={1:'#1976D2',2:'#388E3C'};
+function activateDt(n){
+  [1,2,3].forEach(i=>{
+    const b=document.getElementById('dtBox'+i);
+    b.classList.toggle('active',i===n);
+    b.querySelector('.dt-hint').textContent=i===n?'↓ Active':'Click to explore →';
+  });
+  const a1=document.getElementById('dtArrow1'),a2=document.getElementById('dtArrow2');
+  if(a1)a1.style.color=n>=2?'#1976D2':'#ccc';
+  if(a2)a2.style.color=n>=3?'#388E3C':'#ccc';
+  document.getElementById('dtDetailRule').innerHTML=DT[n].rule;
+  document.getElementById('dtDetailExample').innerHTML=DT[n].example;
+  document.getElementById('dtDetail').classList.add('open');
+}
+activateDt(1);
+
+/* ── WDD ── */
+function activateWdd(n){[0,1,2].forEach(i=>{const c=document.getElementById('wddCol'+i),b=document.getElementById('wddBody'+i),t=c.querySelector('.wdd-toggle');if(i===n){const w=!b.classList.contains('open');b.classList.toggle('open',w);c.classList.toggle('active',w);t.style.transform=w?'rotate(45deg)':'';}});}
+
+
+/* ── WDD ── */
+function activateWdd(n){[0,1,2].forEach(i=>{const c=document.getElementById('wddCol'+i),b=document.getElementById('wddBody'+i),t=c.querySelector('.wdd-toggle');if(i===n){const w=!b.classList.contains('open');b.classList.toggle('open',w);c.classList.toggle('active',w);t.style.transform=w?'rotate(45deg)':'';}});}
+
+/* ── SVG Icons ── */
+const SVG={coin:`<svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="14"/><path d="M18 10v16M14 13.5c0-1.93 1.79-3.5 4-3.5s4 1.57 4 3.5-1.79 3.5-4 3.5-4 1.57-4 3.5 1.79 3.5 4 3.5 4-1.57 4-3.5"/></svg>`,shield:`<svg viewBox="0 0 36 36"><path d="M18 3 6 8v10c0 7 6 12 12 14 6-2 12-7 12-14V8z"/><path d="m13 18 3 3 7-7"/></svg>`,compass:`<svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="14"/><path d="m23 13-2.5 7.5L13 23l2.5-7.5z"/></svg>`,chart:`<svg viewBox="0 0 36 36"><path d="M6 26 14 18l6 4 10-12"/><rect x="4" y="4" width="28" height="28" rx="3"/></svg>`,handshake:`<svg viewBox="0 0 36 36"><path d="M4 22h5l3 3 6-1 6-6M32 22h-5l-3-9-6 2-5 1"/><path d="M17 15 21 19 26 14"/></svg>`,robot:`<svg viewBox="0 0 36 36"><rect x="8" y="13" width="20" height="15" rx="3"/><circle cx="14" cy="20" r="2"/><circle cx="22" cy="20" r="2"/><path d="M14 28v3M22 28v3M18 13V7M14 7h8"/></svg>`,building:`<svg viewBox="0 0 36 36"><rect x="4" y="10" width="28" height="22"/><path d="M12 32V20h12v12M4 10l14-6 14 6"/></svg>`,trending:`<svg viewBox="0 0 36 36"><path d="M4 26 12 18l6 4 14-14"/><path d="M24 8h8v8"/></svg>`,checklist:`<svg viewBox="0 0 36 36"><rect x="6" y="4" width="24" height="28" rx="3"/><path d="m12 14 2.5 3L20 12M12 21h12M12 26h8"/></svg>`,link:`<svg viewBox="0 0 36 36"><path d="M14 22a7 7 0 0 0 10-10l-3-3"/><path d="M22 14a7 7 0 0 0-10 10l3 3"/><line x1="15" y1="21" x2="21" y2="15"/></svg>`,book:`<svg viewBox="0 0 36 36"><path d="M6 5h18a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H6z"/><path d="M12 12h10M12 17h10M12 22h6"/></svg>`,people:`<svg viewBox="0 0 36 36"><circle cx="13" cy="10" r="4"/><circle cx="23" cy="10" r="4"/><path d="M4 30c0-5 4-9 9-9h10c5 0 9 4 9 9"/></svg>`,barChart:`<svg viewBox="0 0 36 36"><rect x="6" y="20" width="6" height="10"/><rect x="15" y="12" width="6" height="18"/><rect x="24" y="6" width="6" height="24"/><path d="M4 32h28"/></svg>`,funnel:`<svg viewBox="0 0 36 36"><path d="M4 6h28l-11 14v10l-6-3V20z"/></svg>`,shield2:`<svg viewBox="0 0 36 36"><path d="M18 3 6 8v10c0 7 6 12 12 14 6-2 12-7 12-14V8z"/><path d="M12 18h12M18 12v12"/></svg>`,gear:`<svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="4"/><path d="M18 4v4M18 28v4M4 18h4M28 18h4M7.76 7.76l2.83 2.83M25.41 25.41l2.83 2.83M7.76 28.24l2.83-2.83M25.41 10.59l2.83-2.83"/></svg>`};
+
+/* ── Diagram Renderers ── */
+/* ── Diagram Renderers ── */
+function renderBar(d){
+  const rows=d.bars.map(b=>`<div class="bar-row"><div class="bar-lbl">${b.label}</div><div class="bar-track"><div class="bar-fill c-${b.color}" style="width:${b.pct}%">${b.pct>25?b.val:''}</div></div><div class="bar-val">${b.pct<=25?b.val:''}</div></div>`).join('');
+  return `<div class="bar-chart">${rows}</div>${d.note?`<div class="bar-note">${d.note}</div>`:''}`;
+}
+function renderTimeBar(d){
+  const rows=d.rows.map(r=>`<div class="time-bar-row"><div class="time-bar-state">${r.state}</div><div class="time-bar-outer"><div class="time-bar-fill c-${r.color}" style="width:${r.pct}%">${r.val}</div><span class="time-bar-delta">${r.delta}</span></div></div>`).join('');
+  return `<div class="time-bar-wrap">${rows}</div>`;
+}
+function renderMix(d){
+  const rows=d.periods.map(p=>`<div class="mix-period-row"><div class="mix-period-lbl">${p.label}</div><div class="mix-bar">${p.offline>0?`<div class="mix-seg" style="width:${p.offline}%;background:#FFA726">${p.offline}%</div>`:''} ${p.digital>0?`<div class="mix-seg" style="width:${p.digital}%;background:#26A69A">${p.digital}%</div>`:''}</div></div>`).join('');
+  return `<div class="mix-chart">${rows}<div class="mix-legend"><span class="mix-leg-item"><span class="mix-leg-dot" style="background:#FFA726"></span>Offline</span><span class="mix-leg-item"><span class="mix-leg-dot" style="background:#26A69A"></span>Digital</span></div></div>`;
+}
+function renderMatrix(d){
+  const hdr=`<div class="score-header-row"><div class="score-corner"></div>${d.headers.map(h=>`<div class="score-header-cell">${h}</div>`).join('')}</div>`;
+  const rows=d.rows.map(r=>`<div class="score-data-row${r.winner?' winner':''}"><div class="score-market-lbl">${r.market}</div>${r.scores.map(s=>`<div class="score-cell ${s}">${s==='H'?'High':s==='M'?'Mid':s==='L'?'Low':s}</div>`).join('')}</div>`).join('');
+  return `<div class="score-matrix">${hdr}${rows}</div>`;
+}
+function renderPhased(d){
+  const n=d.phases.length,cls=n===2?'p2':'p3';
+  let h='';
+  d.phases.forEach((p,i)=>{if(i>0)h+=`<div class="phase-divider">→</div>`;h+=`<div class="phase-box"><div class="phase-num">${p.num}</div><div class="phase-title">${p.title}</div><div class="phase-desc">${p.desc}</div><div class="phase-metric">${p.metric}</div></div>`;});
+  return `<div class="phase-diagram ${cls}">${h}</div>`;
+}
+function renderNode(d){
+  const mkRow=(r,cls)=>`<div class="node-row"><div class="node-row-label ${cls}">${r.label}</div>${r.nodes.map((n,i)=>`${i>0?'<span class="n-edge">→</span>':''}<div class="n-node ${cls}">${n}</div>`).join('')}<span class="n-loop-close ${cls}">${r.loop||''}</span></div>`;
+  return `<div class="node-diagram">${mkRow(d.before,'bad')}${mkRow(d.after,'good')}</div>`;
+}
+function renderCallout(d){
+  const bef=d.before.map(c=>`<div class="callout-cell before"><div class="callout-val before">${c.val}</div><div class="callout-lbl">${c.label}</div></div>`).join('');
+  const aft=d.after.map(c=>`<div class="callout-cell after"><div class="callout-val after">${c.val}</div><div class="callout-lbl">${c.label}</div></div>`).join('');
+  return `<div class="callout-grid"><div class="callout-col"><div class="callout-col-label before-lbl">Before</div>${bef}</div><div class="callout-col"><div class="callout-col-label after-lbl">After</div>${aft}</div></div>`;
+}
+function renderFunnel(d){
+  const maxPct=Math.max(...d.stages.map(s=>s.pct));
+  const rows=d.stages.map(s=>{const w=Math.max(40,Math.round((s.pct/maxPct)*100));return`<div class="funnel-stage ${s.problem?'problem':'normal'}" style="width:${w}%">${s.label}<span class="funnel-sublabel">${s.sublabel}</span></div>`;}).join('');
+  return `<div class="funnel-wrap">${rows}</div>`;
+}
+function renderDiagram(viz){
+  const t={'bar':renderBar,'time_bar':renderTimeBar,'mix':renderMix,'matrix':renderMatrix,'phased':renderPhased,'node':renderNode,'callout':renderCallout,'funnel':renderFunnel};
+  return (t[viz.type]||renderBar)(viz.data);
+}
+
+/* ── Project Data ── */
+const PROJECTS=[
+  {id:'S1',category:'Fintech',filters:'Business Model,0\u21921 Launch',color:'var(--c-fintech)',title:'The $45 Wake-Up Call',company:'JinKeBang \u00b7 Fintech Startup',tags:['Pivot','Unit Economics','Ownership'],oneliner:'Caught unit economics collapse (CAC $45 vs $15 projected) and led full B2C\u2192B2B pivot to cash-flow positive.',metricVal:'$150K',metricLbl:'Revenue in Year 1',icon:'coin',
+   challenge:['B2C CAC reached $45 \u2014 3\u00d7 the $15 projection; LTV was only $20','Every acquisition destroyed $25 in value; runway under 9 months','No path to sustainability on the current model'],
+   approach:['Personally interviewed 15 financial institutions to validate B2B demand','Repositioned product as risk-management SaaS for banks and SME lenders','Rebuilt pricing, sales motion, and roadmap around institutional partnerships'],
+   outcome:['Signed 3 major bank partnerships within 12 months','Closed 10 deals totaling ~$150K revenue in Year 1','Reached positive cash flow ahead of projections'],
+   metrics:[{v:'$45',l:'Actual CAC (vs $15 target)'},{v:'3',l:'Bank partnerships signed'},{v:'$150K',l:'Year 1 revenue'},{v:'<12 mo',l:'To cash-flow positive'}],
+   viz:{type:'bar',title:'Unit Economics: B2C Model (broken) vs B2B Model (fixed)',data:{bars:[{label:'CAC (actual)',val:'$45',pct:100,color:'red'},{label:'LTV per user',val:'$20',pct:44,color:'red'},{label:'Unit margin',val:'\u2212$25',pct:55,color:'amber'},{label:'B2B rev/deal',val:'$15K+',pct:100,color:'green'}],note:'Every B2C user acquired destroyed $25 in value. B2B model made each deal worth $15K+.'}}},
+
+  {id:'S2',category:'Insurance',filters:'Business Model,0\u21921 Launch,Risk & Pricing',color:'var(--c-insurance)',title:'The Uninsurable Market',company:'Ping An Insurance',tags:['0\u21921','Pricing','Incentive Redesign'],oneliner:'Redesigned fee-for-service incentives to make chronic disease insurance viable \u2014 10,000+ policies in month one.',metricVal:'$2M+',metricLbl:'Initial revenue',icon:'shield',
+   challenge:['1 in 10 people had diabetes; entire industry wrote them off as uninsurable','Fee-for-service hospitals incentivized to over-treat, spiking claims unpredictably','No reliable pricing data for this patient population'],
+   approach:['Partnered with 3 hospitals to access longitudinal patient data for actuarial modeling','Redesigned from fee-for-service to fixed management fee per patient','Aligned actuarial, legal, and sales teams across a radical contract structure change'],
+   outcome:['10,000+ policies sold in month one; $2M+ revenue','6 months concept to launch; blueprint expanded to hypertension and other chronic conditions'],
+   metrics:[{v:'10K+',l:'Policies in month one'},{v:'$2M+',l:'Initial revenue'},{v:'6 mo',l:'Concept to launch'},{v:'3',l:'Hospital data partners'}],
+   viz:{type:'node',title:'Incentive Structure: Before vs After',data:{before:{label:'Before',nodes:['Fee-for-service','Hospital: treat more','Claims spike','Uninsurable'],loop:'\u21a9 Vicious cycle'},after:{label:'After',nodes:['Fixed mgmt fee','Hospital: prevent complications','Claims stable','Viable product'],loop:'\u21a9 Virtuous cycle'}}}},
+
+  {id:'S3',category:'Consulting',filters:'Data Analysis,Business Model',color:'var(--c-consulting)',title:'The Turtle and the Rabbit',company:'Accenture \u00b7 SEA Expansion',tags:['Ambiguity','Market Entry','Decision Framework'],oneliner:'Built 4-dimension proxy-data model to evaluate 7 SEA markets under extreme ambiguity in 4 weeks.',metricVal:'~30%',metricLbl:'Thailand market share Y1',icon:'compass',
+   challenge:['CEO wanted immediate 7-country SEA expansion; 4-week hard deadline','Zero primary market data available; high multi-market failure risk','Competitive pressure made doing nothing unacceptable'],
+   approach:['Built 4-dimension scoring model using proxy data (e-commerce adoption, banking penetration, regulatory openness, distribution cost)','Stress-tested with 5 local experts and internal scenario analysis','Recommended phased Thailand-first entry with explicit expansion triggers'],
+   outcome:['CEO approved phased strategy based on structured logic','~30% market share captured in Thailand within Year 1','Avoided catastrophic cost of premature 7-country rollout'],
+   metrics:[{v:'7',l:'Markets scored'},{v:'4 wks',l:'To recommendation'},{v:'30%',l:'Thailand share Y1'},{v:'4',l:'Scoring dimensions'}],
+   viz:{type:'matrix',title:'Market Scoring: 7 Countries \u00d7 4 Criteria (H/M/L)',data:{headers:['E-Commerce','Banking','Regulation','Dist. Cost'],rows:[{market:'Thailand \u2713',scores:['H','H','H','H'],winner:true},{market:'Singapore',scores:['H','H','M','L'],winner:false},{market:'Malaysia',scores:['H','H','M','M'],winner:false},{market:'Indonesia',scores:['H','M','L','M'],winner:false},{market:'Vietnam',scores:['M','M','M','L'],winner:false},{market:'Philippines',scores:['M','L','L','H'],winner:false},{market:'Myanmar',scores:['L','L','L','H'],winner:false}]}}},
+
+  {id:'S4',category:'Consulting',filters:'Data Analysis',color:'var(--c-consulting)',title:'IPO Market Model Rescue',company:'Goldman Sachs Support',tags:['High-Pressure','Financial Modeling','Execution'],oneliner:'Salvaged fragile IPO valuation model with 2 weeks to investor roadshow.',metricVal:'Top IPO',metricLbl:'Of the year by valuation',icon:'chart',
+   challenge:['Key valuation assumptions challenged by analysts 2 weeks before roadshow','Entire deal at risk of repricing or investor confidence collapse','No time for standard research cycles'],
+   approach:['Isolated 3 critical valuation drivers that determined the investment thesis','Rapidly interviewed ~15 industry experts for qualitative pressure-testing','Built sensitivity analysis proving valuations held under 20% downside'],
+   outcome:['Delivered revised defensible narrative on time','Client navigated investor Q&A with confidence','IPO became one of the highest-valued deals of the year'],
+   metrics:[{v:'2 wks',l:'To roadshow'},{v:'15',l:'Experts pressure-tested'},{v:'3',l:'Critical drivers isolated'},{v:'Top deal',l:'Of the year'}],
+   viz:{type:'phased',title:'14-Day Crisis Response Sprint',data:{phases:[{num:'Days 1\u20133',title:'Triage',desc:'Isolated 3 load-bearing assumptions. Discarded everything else.',metric:'Focus achieved'},{num:'Days 4\u201310',title:'Validate',desc:'~15 expert interviews. Qualitative stress-test on each driver.',metric:'Evidence built'},{num:'Days 11\u201314',title:'Deliver',desc:'Sensitivity analysis + revised narrative. Board-ready.',metric:'Deal closed'}]}}},
+
+  {id:'S5',category:'Consulting',filters:'Deadlock,Business Model',color:'var(--c-consulting)',title:'Skin in the Game',company:'Accenture \u00b7 Financial Group',tags:['Trust Building','Commercial Design','Negotiation'],oneliner:'Outcome-based fee model turned resistant client into advocate \u2014 expanded to 7 subsidiaries.',metricVal:'30%',metricLbl:'Cost reduction in 6 months',icon:'handshake',
+   challenge:['Client resistant to transformation; standard pitches failed repeatedly','CFO: "Show me ROI before I commit any budget"','No room to reduce scope'],
+   approach:['Proposed outcome-based model: fee portion tied to measurable cost-reduction targets','Negotiated downside floor; built shared metrics dictionary','Scoped pilot to single business line with 6-month proof window'],
+   outcome:['Pilot: 30% operational cost reduction in 6 months','Client transformed from skeptic to advocate','Contract expanded to all 7 subsidiaries'],
+   metrics:[{v:'30%',l:'Cost reduction in pilot'},{v:'6 mo',l:'Pilot timeline'},{v:'7',l:'Subsidiaries expanded'},{v:'1\u21927',l:'Resistance to scale'}],
+   viz:{type:'bar',title:'Operational Cost Index: Baseline \u2192 Pilot \u2192 Scale',data:{bars:[{label:'Baseline (start)',val:'100%',pct:100,color:'red'},{label:'Mid-pilot (3mo)',val:'~85%',pct:85,color:'amber'},{label:'End of pilot (6mo)',val:'70%',pct:70,color:'green'},{label:'Reduction achieved',val:'\u221230%',pct:30,color:'green'}],note:'30% cost reduction unlocked expansion to all 7 subsidiaries.'}}},
+
+  {id:'S6',category:'Consulting',filters:'AI/Automation,0\u21921 Launch',color:'var(--c-consulting)',title:'The Invisible Opportunity',company:'Accenture \u00b7 Insurance Client',tags:['AI/NLP','Manufactured Mandate','MVP'],oneliner:'Zero budget, zero mandate \u2014 built ROI case, shipped NLP automation MVP in 8 weeks.',metricVal:'$420K',metricLbl:'Projected annual savings',icon:'robot',
+   challenge:['"Industry-leading" claims process \u2014 nobody was trying to improve it','Adjusters manually processing unstructured medical PDFs; massive hidden inefficiency','No mandate, no budget, no permission'],
+   approach:['Built proactive ROI case using US implementation analogs to secure pilot funding','Scoped MVP to clean printed invoices only \u2014 guaranteed accuracy, earned trust fast','Embedded claims processors in daily feedback loop; 2-week agile sprints'],
+   outcome:['MVP live in 8 weeks from first pitch','70% reduction in processing time per claim','7\u21922.5 day customer wait time; became client’s flagship AI reference case'],
+   metrics:[{v:'8 wks',l:'Mandate to MVP'},{v:'70%',l:'Processing time cut'},{v:'7\u21922.5d',l:'Customer wait time'},{v:'$420K',l:'Annual savings'}],
+   viz:{type:'time_bar',title:'Claims Processing Time: Before vs After',data:{rows:[{state:'Before (manual review)',val:'7 days',pct:100,color:'red',delta:'Baseline'},{state:'After (AI-assisted)',val:'2.5 days',pct:36,color:'green',delta:'\u221270%'}]}}},
+
+  {id:'S7',category:'Insurance',filters:'Deadlock',color:'var(--c-insurance)',title:'Three-Continent Deadlock',company:'Ping An \u00d7 Discovery Health',tags:['Stakeholder Alignment','Architecture Design','Global'],oneliner:'2-year IT standard vs. 6-month deadline \u2014 tiered architecture let both sides win.',metricVal:'35',metricLbl:'Hospitals onboarded on time',icon:'building',
+   challenge:['Discovery (South Africa): 2-year IT integration required','Ping An: competitive pressure demanded 6-month launch','Hospital: "2 years minimum" \u2014 both mandates were legitimate'],
+   approach:['Physical hospital visits for Discovery’s South African leads \u2014 replaced conference calls with ground truth','Dual-track metrics proving Ping An’s growth KPIs + Discovery’s health outcomes were not mutually exclusive','Tiered rollout: 2 flagship (full standard) \u2192 10 (lite API) \u2192 35 (full scale)'],
+   outcome:['Launched within 6-month deadline; 35 hospitals (exceeded target)','92% user satisfaction; 14% reduction in claims costs','Discovery adopted tiered architecture as global emerging market standard'],
+   metrics:[{v:'35',l:'Hospitals onboarded'},{v:'92%',l:'User satisfaction'},{v:'14%',l:'Claims cost reduction'},{v:'Global',l:'Standard adopted'}],
+   viz:{type:'phased',title:'Tiered Rollout Architecture \u2014 How Both Sides Won',data:{phases:[{num:'Phase 1',title:'2 Flagship Hospitals',desc:'Full Discovery IT standard. Validates global compliance without delay.',metric:'Standard proven'},{num:'Phase 2',title:'+8 Hospitals',desc:'Lite API package. Gives Ping An the speed they need.',metric:'10 total'},{num:'Phase 3',title:'+25 Hospitals',desc:'Full integration. Both corporate objectives met simultaneously.',metric:'35 \u2014 on time'}]}}},
+
+  {id:'S8',category:'Fintech',filters:'Data Analysis,Business Model',color:'var(--c-fintech)',title:'WeChat Growth Engine',company:'JinKeBang \u00b7 Fintech Startup',tags:['Growth','Experimentation','Channel Strategy'],oneliner:'50/50 budget experiment proved digital channel \u2014 grew to 80% of business in 3 years.',metricVal:'1/3',metricLbl:'Digital CPA vs. offline',icon:'trending',
+   challenge:['Co-founders committed 100% to offline marketing; strong cultural resistance','Limited runway \u2014 no margin for failed experiments','Digital marketing had no proof point in this customer segment'],
+   approach:['Negotiated 50/50 budget split as a 3-month controlled experiment','Education-first WeChat content strategy \u2014 financial health articles, not ads','Segmented communities by loan stage; measured CAC and LTV separately by channel'],
+   outcome:['4,000+ subscribers in 3 months; data ended the debate','30% of new business from digital in Year 1 \u2192 80% by Year 3','Digital CPA = 1/3 of offline CPA'],
+   metrics:[{v:'4K+',l:'Subscribers in 3 months'},{v:'0\u219280%',l:'Digital share by Year 3'},{v:'1/3',l:'Digital vs offline CPA'},{v:'50/50',l:'The experiment that proved it'}],
+   viz:{type:'mix',title:'Channel Mix Shift: Y0 \u2192 Y3',data:{periods:[{label:'Year 0',offline:100,digital:0},{label:'Year 1',offline:70,digital:30},{label:'Year 2',offline:40,digital:60},{label:'Year 3',offline:20,digital:80}]}}},
+
+  {id:'S9',category:'Insurance',filters:'Data Analysis,Leadership',color:'var(--c-insurance)',title:'From Luck to Trust',company:'Health Insurance',tags:['Service Design','Retention','Ops'],oneliner:'Standardized agent service behavior at "moments of truth" \u2014 eliminated retention variance in 3 months.',metricVal:'+7%',metricLbl:'Retention in 3 months',icon:'checklist',
+   challenge:['Retention metrics showed high variance \u2014 some agents performed well, others badly','No consistency at "moments of truth" across the service team','Incentives rewarded sales volume, not service quality'],
+   approach:['Shadowed 5 agents; ran focus groups to identify variance sources','Mapped 6 critical "moments of truth" where customer experience diverged','Redesigned CRM workflow + shifted incentives from sales to service quality'],
+   outcome:['7% retention improvement within 3 months','Measurable cross-sell revenue increase (customers felt consistently supported)'],
+   metrics:[{v:'+7%',l:'Retention in 3 months'},{v:'6',l:'Moments of truth codified'},{v:'5',l:'Agents shadowed'},{v:'\u2191',l:'Cross-sell lift'}],
+   viz:{type:'time_bar',title:'Retention Rate: Before vs After Standardization',data:{rows:[{state:'Before (high agent variance)',val:'~78%',pct:78,color:'amber',delta:'Baseline'},{state:'After (codified service standard)',val:'~85%',pct:85,color:'green',delta:'+7pp'}]}}},
+
+  {id:'S10',category:'Insurance',filters:'Deadlock',color:'var(--c-insurance)',title:'UnitedHealthcare Alliance',company:'Ping An \u00d7 UnitedHealthcare',tags:['Partnership Strategy','Think Big','Product Launch'],oneliner:'Transformed a basic referral into a $10M+ strategic co-development alliance.',metricVal:'$10M+',metricLbl:'5-year revenue projection',icon:'link',
+   challenge:['Chinese professionals in US had fragmented, unmet health coverage needs','No cross-border product existed; regulatory + pricing + provider complexity seemed prohibitive','Basic UHC referral had no product depth or defensibility'],
+   approach:['Prioritized 3 "kill-switch" constraints: compliance, pricing, provider networks','Assembled expert working group to neutralize fatal constraints before engineering investment','Built P&L model quantifying upside revenue and downside risk scenarios'],
+   outcome:['Launched cross-border product successfully','UHC relationship upgraded from referral to strategic co-development alliance','$10M+ revenue projected over 5 years; new business line created'],
+   metrics:[{v:'$10M+',l:'5-year revenue'},{v:'3',l:'Kill-switch constraints solved'},{v:'Referral\u2192Alliance',l:'Relationship tier'},{v:'1',l:'New business line'}],
+   viz:{type:'phased',title:'Partnership Value Ladder',data:{phases:[{num:'Stage 1',title:'Referral',desc:'Basic lead-passing. No product depth or defensibility.',metric:'$0 incremental value'},{num:'Stage 2',title:'Co-Development',desc:'Shared product design. 3 fatal constraints neutralized first.',metric:'Product launched'},{num:'Stage 3',title:'Strategic Alliance',desc:'Formal co-development agreement. New business line.',metric:'$10M+ projected'}]}}},
+
+  {id:'S11',category:'Insurance',filters:'Leadership',color:'var(--c-insurance)',title:'Learning Healthcare Fast',company:'Ping An Insurance',tags:['Domain Ramp-Up','Leadership','Ownership'],oneliner:'New PM in healthcare \u2014 earned 6 domain experts\u2019 trust in 4 weeks through structured humility.',metricVal:'Y1 Goals',metricLbl:'All targets hit',icon:'book',
+   challenge:['Inherited team of 6 deep healthcare domain experts with zero PM discipline','Zero healthcare experience; team skeptical of outsider imposing process','12-month mandate to launch new product lines'],
+   approach:['Immediate transparency about knowledge gaps \u2014 positioned as learner, not director','Shadowed clinicians; studied policy documents on weekends','Led with PM value: structuring ambiguity, crisp PRDs, roadmaps that reflected domain input'],
+   outcome:['Team trust earned within 4 weeks','Launched all new product lines; hit Year 1 revenue goals'],
+   metrics:[{v:'4 wks',l:'To earn expert trust'},{v:'6',l:'Domain experts led'},{v:'100%',l:'Y1 targets hit'},{v:'0',l:'Healthcare background at start'}],
+   viz:{type:'callout',title:'Ramp-Up: From Zero to Full Trust',data:{before:[{val:'0',label:'Healthcare background at start'},{val:'Low',label:'Team confidence in new PM'}],after:[{val:'4 wks',label:'Weeks to earn expert trust'},{val:'100%',label:'Year 1 revenue targets hit'}]}}},
+
+  {id:'S12',category:'Analytics',filters:'Leadership',color:'var(--c-analytics)',title:'Building Team Trust',company:'Health Insurance \u00b7 Leadership',tags:['Servant Leadership','Culture','Execution'],oneliner:'Pivoted from directive to servant leadership \u2014 flagship product launched 1 month early.',metricVal:'\u221217%',metricLbl:'Development cycle time',icon:'people',
+   challenge:['Inherited low-morale expert team resistant to directive leadership','High friction, missed milestones, senior people disengaged','Directive approach created compliance, not ownership'],
+   approach:['1:1s revealed team wanted autonomy and trust, not direction','Pivoted: set clear outcomes, then focused on removing roadblocks','Informal touchpoints (Friday lunches) to build psychological safety'],
+   outcome:['Team ownership and initiative spiked','Collaboration eliminated major rework cycles','Flagship product launched 1 full month early; cycle time cut by ~17%'],
+   metrics:[{v:'\u22121 mo',l:'Ahead of launch'},{v:'\u221217%',l:'Cycle time reduction'},{v:'\u2191',l:'Team ownership'},{v:'0',l:'Missed milestones after pivot'}],
+   viz:{type:'node',title:'Leadership Loop: Vicious \u2192 Virtuous',data:{before:{label:'Before',nodes:['PM directs','Team complies','Low ownership','Missed milestones'],loop:'\u21a9 Repeats'},after:{label:'After',nodes:['PM removes blockers','Team owns','High initiative','\u221217% cycle time'],loop:'\u21a9 Compounds'}}}},
+
+  {id:'S13',category:'Analytics',filters:'Data Analysis,Business Model',color:'var(--c-analytics)',title:'Campaign ROI Framework',company:'Healthcare Platform',tags:['SQL/Python','Analytics','KPI Redesign'],oneliner:'Pipeline exposing wrong North Star metric \u2014 budget reallocation drove 20% YoY ROI lift.',metricVal:'+20%',metricLbl:'YoY marketing ROI',icon:'barChart',
+   challenge:['Marketing optimizing for CPC/CTR \u2014 vanity metrics with no LTV signal','Millions in "cheap" channel with 3\u00d7 hidden churn rate','No data pipeline connecting ad spend to downstream user behavior'],
+   approach:['Built SQL/Python pipeline joining ad spend with backend user LTV database','Cohort analysis by acquisition channel; modeled LTV/CAC by source','Visualized churn disparity and presented budget reallocation case to leadership'],
+   outcome:['Org shifted from CPC to LTV/CAC as primary optimization metric','Budget reallocated to high-LTV channel','20% YoY improvement in overall marketing ROI'],
+   metrics:[{v:'+20%',l:'YoY marketing ROI'},{v:'3\u00d7',l:'Churn disparity found'},{v:'SQL+Python',l:'Pipeline built myself'},{v:'1',l:'Wrong North Star replaced'}],
+   viz:{type:'node',title:'Metric System: Wrong Loop \u2192 Right Loop',data:{before:{label:'Wrong',nodes:['Optimize CPC','Cheap clicks','3\u00d7 churn','LTV \u2212$20 \u2192 more CPC'],loop:'\u21a9 Vicious'},after:{label:'Right',nodes:['Optimize LTV/CAC','Quality acquisition','2\u00d7 retention','LTV +$45 \u2192 reinvest'],loop:'\u21a9 Virtuous'}}}},
+
+  {id:'S14',category:'Analytics',filters:'Data Analysis',color:'var(--c-analytics)',title:'Insurance Churn Analysis',company:'Health Insurance',tags:['Cohort Analysis','Root Cause','Retention'],oneliner:'Cohort analysis traced 6-month churn to Day-1 ad copy \u2014 fixed the promise, not the product.',metricVal:'+15%',metricLbl:'6-month retention rate',icon:'funnel',
+   challenge:['High early engagement + catastrophic 6-month churn from one acquisition channel','Product team blamed; everyone assumed feature or pricing failure','Root cause invisible: churn happened 6 months after acquisition'],
+   approach:['Segmented cohorts by acquisition channel; mapped full user journey from ad view to churn date','Audited ad copy vs. actual service scope \u2014 found hyperbolic promise vs. real product gap','Partnered with marketing to dial back promise; redesigned onboarding'],
+   outcome:['Root cause: expectation mismatch from Day-1 ad copy','6-month retention for targeted channel improved by 15%','No product changes needed'],
+   metrics:[{v:'+15%',l:'6-month retention'},{v:'Day 1',l:'Root cause: ad copy'},{v:'0',l:'Product changes needed'},{v:'\u2191',l:'LTV of treated cohorts'}],
+   viz:{type:'funnel',title:'Where the Churn Was Actually Born',data:{stages:[{label:'Ad: "Comprehensive coverage for everything"',sublabel:'Day 0 \u2014 high CTR from overpromise',pct:100,problem:true},{label:'Sign-up',sublabel:'Day 0 \u2014 Converts well (promise worked)',pct:90,problem:false},{label:'30-day engagement',sublabel:'Satisfied so far',pct:80,problem:false},{label:'90-day',sublabel:'Reality gap beginning to show',pct:62,problem:false},{label:'6-month CHURN',sublabel:'Traced back to Day-0 ad copy',pct:45,problem:true}]}}},
+
+  {id:'S15',category:'Financial Systems',filters:'Risk & Pricing,Data Analysis',color:'var(--c-finsys)',title:'Group Risk Management Platform',company:'Yingda Holdings \u00b7 Accenture',tags:['Finance Systems','Risk Framework','Data Governance'],oneliner:'118-indicator risk framework across 4 domains \u2014 unified reporting for a fragmented conglomerate.',metricVal:'118',metricLbl:'Risk indicators designed',icon:'shield2',
+   challenge:['Financial conglomerate: fragmented risk reporting across 4 domains with no common language','Leadership had no unified view of enterprise exposure','No shared taxonomy across credit, market, liquidity, and operational risk'],
+   approach:['Stakeholder interviews + regulatory research across all 4 domains','Designed 118 indicators balancing standardization with business-unit configurability','Built shared taxonomy + flexible reporting layer'],
+   outcome:['Unified risk reports supporting enterprise-wide leadership decisions','Stronger monitoring and escalation across all 4 domains','Foundation for future digitization of risk management'],
+   metrics:[{v:'118',l:'Risk indicators'},{v:'4',l:'Domains unified'},{v:'1',l:'Shared taxonomy'},{v:'\u2191',l:'Leadership visibility'}],
+   viz:{type:'bar',title:'Risk Indicators Built per Domain',data:{bars:[{label:'Credit Risk',val:'32',pct:94,color:'green'},{label:'Market Risk',val:'28',pct:82,color:'green'},{label:'Liquidity Risk',val:'24',pct:70,color:'green'},{label:'Operational Risk',val:'34',pct:100,color:'green'}],note:'Total: 118 indicators across 4 domains \u2192 unified into one shared governance taxonomy.'}}},
+
+  {id:'S16',category:'Financial Systems',filters:'AI/Automation',color:'var(--c-finsys)',title:'Securities Core Automation',company:'Financial Institution',tags:['Process Automation','Fintech Systems','Roadmap'],oneliner:'Prioritized automation roadmap freed 115 staff positions and saved $1.5M.',metricVal:'$1.5M',metricLbl:'Operating cost savings',icon:'gear',
+   challenge:['Manual, fragmented operations across 5 workflow areas','Error-prone workflows relying on heroic manual controls; high operational risk','No clear framework for which workflows to automate first'],
+   approach:['Mapped pain points across all 5 areas via SOP review + interviews','Applied value-effort prioritization: risk reduction \u00d7 cost savings \u00d7 compliance impact','Tiered roadmap with quick wins first to prove momentum'],
+   outcome:['Counter workload reduced 50%; 115 staff positions freed','$1.5M operating cost savings','Cleaner control backbone across trading and reconciliation'],
+   metrics:[{v:'\u221250%',l:'Counter workload'},{v:'115',l:'Positions freed'},{v:'$1.5M',l:'Cost savings'},{v:'5',l:'Workflow areas'}],
+   viz:{type:'bar',title:'Automation Coverage by Workflow Area',data:{bars:[{label:'Counter Ops (after)',val:'\u221250%',pct:50,color:'green'},{label:'Reconciliation',val:'Automated',pct:80,color:'green'},{label:'Clearing',val:'Automated',pct:72,color:'green'},{label:'Account Mgmt',val:'Automated',pct:65,color:'green'},{label:'Trading Workflow',val:'Phase 3',pct:40,color:'amber'}],note:'Total impact: 115 staff positions freed, $1.5M in operating cost savings.'}}}
+];
+
+/* ── Render Grid ── */
+function renderGrid(){
+  document.getElementById('projGrid').innerHTML=PROJECTS.map(p=>
+    `<div class="proj-card" data-filters="${p.filters||''}" style="background:${p.color}" onclick="openModal('${p.id}')">
+      <div class="proj-card-overlay"><span class="proj-card-cta">Read case →</span></div>
+      <div class="proj-cat-row"><span class="proj-cat-badge">${p.category}</span></div>
+      <div class="proj-icon">${SVG[p.icon]||SVG.chart}</div>
+      <div class="proj-title">${p.title}</div>
+      <div class="proj-oneliner">${p.oneliner}</div>
+      <div class="proj-tags">${p.tags.map(t=>`<span class="proj-tag">${t}</span>`).join('')}</div>
+    </div>`
+  ).join('');
+}
+
+/* ── Modal ── */
+function openModal(id){
+  const p=PROJECTS.find(x=>x.id===id);if(!p)return;
+  document.getElementById('mTitle').textContent=p.title;
+  document.getElementById('mMeta').innerHTML=`<span class="modal-tag">${p.company}</span>`+p.tags.map(t=>`<span class="modal-tag">${t}</span>`).join('');
+  document.getElementById('mFlow').innerHTML=`<div class="flow-box"><p class="flow-lbl">Challenge</p><ul class="flow-pts">${p.challenge.map(c=>`<li>${c}</li>`).join('')}</ul></div><div class="flow-div">&#8594;</div><div class="flow-box"><p class="flow-lbl">Approach</p><ul class="flow-pts">${p.approach.map(a=>`<li>${a}</li>`).join('')}</ul></div><div class="flow-div">&#8594;</div><div class="flow-box"><p class="flow-lbl">Outcome</p><ul class="flow-pts">${p.outcome.map(o=>`<li>${o}</li>`).join('')}</ul></div>`;
+  document.getElementById('mMetrics').innerHTML=p.metrics.map(m=>`<div class="metric-box"><div class="metric-big">${m.v}</div><div class="metric-lbl">${m.l}</div></div>`).join('');
+  const dw=document.getElementById('mDiagram');
+  dw.innerHTML=`<p class="diagram-title">${p.viz.title||'Key Mechanism'}</p>${renderDiagram(p.viz)}`;
+  const bd=document.getElementById('modalBackdrop');
+  bd.style.display='flex';
+  requestAnimationFrame(()=>requestAnimationFrame(()=>bd.classList.add('open')));
+  document.body.style.overflow='hidden';
+  document.getElementById('modalBox').querySelector('button').focus();
+}
+function closeModal(){
+  const bd=document.getElementById('modalBackdrop');
+  bd.classList.remove('open');
+  bd.addEventListener('transitionend',()=>{bd.style.display='';},{once:true});
+  document.body.style.overflow='';
+}
+function closeModalOnBackdrop(e){if(e.target===document.getElementById('modalBackdrop'))closeModal();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+/* ── Init ── */
+buildTestimonials();
+tStartAuto();
+tAddDrag();
+buildSuperpowers();
+buildFilters();
+renderGrid();
+activateDt(1);
+
+// Fix tooltip overflow on right-edge tags
+document.querySelectorAll('.skill-tag').forEach(tag=>{
+  tag.addEventListener('mouseenter',()=>{
+    const tip=tag.querySelector('.skill-tooltip');
+    if(!tip)return;
+    tip.classList.remove('tip-right');
+    tip.style.left='0';tip.style.right='auto';
+    const rect=tip.getBoundingClientRect();
+    if(rect.right>window.innerWidth-12){
+      tip.style.left='auto';
+      tip.style.right='0';
+      tip.classList.add('tip-right');
+    }
+  });
+});
+
+// Contact form async submit
+const contactForm=document.getElementById('contactForm');
+if(contactForm){
+  contactForm.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const btn=contactForm.querySelector('.contact-form-submit');
+    btn.innerHTML='Sending…';btn.disabled=true;
+    try{
+      const res=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});
+      if(res.ok){
+        contactForm.reset();
+        btn.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sent';
+        btn.style.background='var(--green-text)';
+      } else {
+        btn.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+        btn.disabled=false;
+        alert('Something went wrong. Please email me directly.');
+      }
+    } catch(err){
+      btn.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+      btn.disabled=false;
+    }
+  });
+}
+</script>
+</body>
+</html>
