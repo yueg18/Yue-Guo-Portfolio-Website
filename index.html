@@ -453,13 +453,10 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   .contact-cards{grid-template-columns:repeat(2,1fr)!important}
 }
 @media(max-width:600px){
-  .nav-inner{padding:10px 0 0}
-  .nav-logo{font-size:15px;margin-bottom:8px;display:block}
-  .nav-tabs{justify-content:space-around;width:100%;overflow:visible}
-  .nav-tab{font-size:12.5px;padding:10px 8px;flex:1;text-align:center;white-space:nowrap}
-  .testimonial-slide{padding:22px 16px}
-  .testimonial-quote{font-size:15px;line-height:1.5}
-  .testimonial-tag{font-size:11px;padding:3px 10px}
+  .nav-inner{padding:14px 16px 0}
+  .nav-logo{font-size:17px;margin-bottom:10px}
+  .nav-tab{font-size:11px;padding:5px 8px}
+  .testimonial-slide{padding:28px 20px}
   .sp-card{padding:24px 20px}
   /* Hero */
   .about-hero{padding-bottom:36px;margin-bottom:36px}
@@ -487,7 +484,7 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
   .meth-divider{padding-top:36px;margin-top:36px}
 }
 @media(max-width:420px){
-  .nav-tab{font-size:11.5px;padding:9px 6px}
+  .nav-tab{font-size:10px;padding:4px 6px;letter-spacing:-.01em}
   .contact-links{flex-direction:row;flex-wrap:wrap}.contact-link-sep{display:none}
   .str-grid{grid-template-columns:1fr}
   .hero-cta{margin-top:28px}
@@ -502,20 +499,6 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
-
-/* ── Nav tabs scrollbar hide (webkit) ── */
-.nav-tabs::-webkit-scrollbar{display:none}
-
-/* ── Mobile Skill Info Panel ── */
-#skillInfoPanel{position:fixed;bottom:0;left:0;right:0;background:var(--white);border-radius:16px 16px 0 0;padding:0;z-index:500;transform:translateY(100%);transition:transform .35s var(--ease-out);box-shadow:0 -8px 40px rgba(0,0,0,.14);border-top:1px solid var(--border)}
-#skillInfoPanel.open{transform:translateY(0)}
-#skillInfoOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.22);z-index:499;-webkit-tap-highlight-color:transparent}
-#skillInfoOverlay.open{display:block}
-.sip-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:12px auto 0}
-.sip-inner{padding:16px 22px 40px;position:relative}
-.sip-title{font-size:14px;font-weight:600;letter-spacing:-.01em;margin-bottom:10px;color:var(--text);padding-right:36px}
-.sip-close{position:absolute;top:0;right:14px;background:none;border:none;font-size:22px;color:var(--muted);padding:8px;line-height:1;cursor:pointer}
-.sip-body{font-size:13.5px;color:#444;line-height:1.75}
 </style>
 </head>
 <body>
@@ -849,36 +832,19 @@ requestAnimationFrame(()=>{const a=document.querySelector('.nav-tab.active');if(
 
 /* ── Decision Tree ── */
 const DT={1:{rule:`<strong>The Method</strong>Every complex problem has a small number of variables that actually determine the outcome. The rest is noise. Before building anything, I isolate the one structural assumption that — if wrong — makes every other analysis irrelevant. Speed in problem-solving comes from knowing what to ignore, not from analyzing more.`,example:`<strong>Case Evidence</strong>In the Uninsurable Market case, the load-bearing assumption was "high-risk patients are inherently expensive." Everyone in the industry had accepted this. It was wrong — the fee-for-service contract structure made them expensive. Identifying that single assumption changed everything. The product design followed naturally.`},2:{rule:`<strong>The Method</strong>Most organizational failures aren’t execution failures — they’re framing failures. Someone is solving the wrong problem with great discipline. My standard move in any stakeholder deadlock is to stop arguing within the inherited frame entirely and ask what problem we’re actually trying to solve. The answer is usually different for each party — and that difference is the key.`,example:`<strong>Case Evidence</strong>In the Three-Continent Deadlock, neither Discovery nor Ping An was wrong. Discovery was right about brand consistency. Ping An was right about competitive timing. They were arguing as if those goals were mutually exclusive — they weren’t. The solution wasn’t a compromise; it was a new architecture that made both problems solvable simultaneously.`},3:{rule:`<strong>The Method</strong>The best solutions don’t require people to change their behavior or act against their interests. They change the incentive architecture so the right behavior becomes the obvious choice. This is the difference between a solution and a workaround. A workaround requires someone to keep choosing it. A structural solution is self-sustaining regardless of who is in the room.`,example:`<strong>Case Evidence</strong>The Chronic Disease Insurance product didn’t ask hospitals to care more about patients. It changed the contract so caring about patients was financially optimal. Fixed management fees replaced fee-for-service. The incentive aligned. Claims stabilized. The product went from "uninsurable" to 10,000+ policies in month one.`}};
-const DT_ARROW_COLORS={1:’#1976D2’,2:’#388E3C’};
+const DT_ARROW_COLORS={1:'#1976D2',2:'#388E3C'};
 function activateDt(n){
   [1,2,3].forEach(i=>{
-    const b=document.getElementById(‘dtBox’+i);
-    b.classList.toggle(‘active’,i===n);
-    b.querySelector(‘.dt-hint’).textContent=i===n?’↓ Active’:’Click to explore →’;
+    const b=document.getElementById('dtBox'+i);
+    b.classList.toggle('active',i===n);
+    b.querySelector('.dt-hint').textContent=i===n?'↓ Active':'Click to explore →';
   });
-  const a1=document.getElementById(‘dtArrow1’),a2=document.getElementById(‘dtArrow2’);
-  if(a1)a1.style.color=n>=2?’#1976D2’:’#ccc’;
-  if(a2)a2.style.color=n>=3?’#388E3C’:’#ccc’;
-  document.getElementById(‘dtDetailRule’).innerHTML=DT[n].rule;
-  document.getElementById(‘dtDetailExample’).innerHTML=DT[n].example;
-  const detail=document.getElementById(‘dtDetail’);
-  detail.classList.add(‘open’);
-  // Mobile: move detail inline immediately after the clicked step
-  const dtRow=document.getElementById(‘dtRow’);
-  const nodes=Array.from(dtRow.querySelectorAll(‘.dt-node’));
-  if(window.innerWidth<=960){
-    // Place detail right after node n (index n-1) inside the grid row
-    if(n<nodes.length){
-      dtRow.insertBefore(detail,nodes[n]);
-    } else {
-      dtRow.appendChild(detail);
-    }
-  } else {
-    // Desktop: ensure detail is a sibling after dtRow (not inside it)
-    if(detail.parentNode===dtRow){
-      dtRow.parentNode.insertBefore(detail,dtRow.nextSibling);
-    }
-  }
+  const a1=document.getElementById('dtArrow1'),a2=document.getElementById('dtArrow2');
+  if(a1)a1.style.color=n>=2?'#1976D2':'#ccc';
+  if(a2)a2.style.color=n>=3?'#388E3C':'#ccc';
+  document.getElementById('dtDetailRule').innerHTML=DT[n].rule;
+  document.getElementById('dtDetailExample').innerHTML=DT[n].example;
+  document.getElementById('dtDetail').classList.add('open');
 }
 activateDt(1);
 
@@ -890,39 +856,7 @@ function activateWdd(n){[0,1,2].forEach(i=>{const c=document.getElementById('wdd
 function activateWdd(n){[0,1,2].forEach(i=>{const c=document.getElementById('wddCol'+i),b=document.getElementById('wddBody'+i),t=c.querySelector('.wdd-toggle');if(i===n){const w=!b.classList.contains('open');b.classList.toggle('open',w);c.classList.toggle('active',w);t.style.transform=w?'rotate(45deg)':'';}});}
 
 /* ── SVG Icons ── */
-const SVG={
-  // S1: $45 Wake-Up Call — broken trend line + pivot arrow (B2C→B2B)
-  coin:`<svg viewBox="0 0 36 36"><path d="M6 28 13 16 19 22 30 8"/><path d="M26 8h4v4"/><circle cx="13" cy="28" r="2.5" style="fill:rgba(0,0,0,.4);stroke:none"/><circle cx="19" cy="22" r="2.5" style="fill:rgba(0,0,0,.25);stroke:none"/><path d="M4 32h28"/></svg>`,
-  // S2: Uninsurable Market — shield with heart-pin (healthcare insurance for the vulnerable)
-  shield:`<svg viewBox="0 0 36 36"><path d="M18 4 7 9v9c0 6.5 4.5 11 11 13 6.5-2 11-6.5 11-13V9z"/><path d="M13 18c0-2.8 2.2-5 5-5s5 2.2 5 5c0 1.8-1.2 3.5-2.6 4.7L18 25l-2.4-2.3C14.2 21.5 13 19.8 13 18z"/></svg>`,
-  // S3: SEA Market Scoring — map with cities at different priority sizes
-  compass:`<svg viewBox="0 0 36 36"><rect x="4" y="8" width="28" height="18" rx="2"/><circle cx="11" cy="18" r="3.5"/><circle cx="20" cy="14" r="2.5"/><circle cx="27" cy="20" r="1.8"/><path d="M14.5 18 18 14M22.5 14 25 20"/></svg>`,
-  // S4: IPO Rescue — document with a recovering trend line (crisis turned around)
-  chart:`<svg viewBox="0 0 36 36"><path d="M8 5h16l6 6v19H8z"/><path d="M22 5v6h6"/><path d="M13 24l3.5-5.5 3 2.5 5-7"/><path d="M13 28h9"/></svg>`,
-  // S5: Outcome-based Fee — balance scale (shared risk, shared upside)
-  handshake:`<svg viewBox="0 0 36 36"><path d="M18 5v5"/><line x1="6" y1="17" x2="30" y2="17"/><path d="M6 17c0 6.6 5.4 11 12 11s12-4.4 12-11"/><path d="M10 22.5 13 17M26 22.5 23 17"/></svg>`,
-  // S6: Invisible Opportunity — lightbulb with spark (the idea nobody asked for)
-  robot:`<svg viewBox="0 0 36 36"><path d="M18 6a7 7 0 0 0-7 7c0 2.8 1.5 5.3 3.7 6.6V24h6.6v-4.4A7 7 0 0 0 18 6z"/><path d="M15 24h6M15 27h6"/><path d="M20.5 10 22 8M23 9l2-1M22 12l3 1"/></svg>`,
-  // S7: Three-Continent Deadlock — globe with three nodes (continents bridged)
-  building:`<svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="13"/><path d="M5 18h26M18 5c-3 3.5-5 8-5 13s2 9.5 5 13M18 5c3 3.5 5 8 5 13s-2 9.5-5 13"/><circle cx="8" cy="13" r="2.5" style="fill:rgba(0,0,0,.45);stroke:none"/><circle cx="28" cy="13" r="2.5" style="fill:rgba(0,0,0,.45);stroke:none"/><circle cx="18" cy="30" r="2.5" style="fill:rgba(0,0,0,.45);stroke:none"/><path d="M9.5 14 18 18 26.5 14M18 18v11"/></svg>`,
-  // S8: WeChat Growth — mobile phone + escaping trend arrow (digital channel taking over)
-  trending:`<svg viewBox="0 0 36 36"><rect x="5" y="7" width="13" height="21" rx="2"/><circle cx="11.5" cy="12" r="2.5"/><path d="M8 19h7M8 23h5"/><path d="M20 22c3-5 7-9 12-13"/><path d="M27 9h5v5"/></svg>`,
-  // S9: Service Standardization — star with checkmark (quality standard achieved consistently)
-  checklist:`<svg viewBox="0 0 36 36"><path d="M18 4l3.5 7 7.7.7-5.6 5.5 1.3 7.7L18 21.2l-6.9 3.7 1.3-7.7-5.6-5.5 7.7-.7z"/><path d="M13.5 17l3.5 4 6-7"/></svg>`,
-  // S10: UHC Alliance — two overlapping circles (referral → strategic alliance)
-  link:`<svg viewBox="0 0 36 36"><circle cx="12" cy="18" r="8.5"/><circle cx="24" cy="18" r="8.5"/><path d="M15.5 12.5c1.5 2 1.5 9 0 11M20.5 12.5c-1.5 2-1.5 9 0 11"/></svg>`,
-  // S11: Learning Healthcare Fast — clock face (earned expert trust in 4 weeks)
-  book:`<svg viewBox="0 0 36 36"><circle cx="18" cy="16" r="10"/><path d="M18 9.5V16.5l4 2.5"/><path d="M13.5 29 12 33M22.5 29 24 33M11 31h14"/></svg>`,
-  // S12: Team Trust — two people + upward arrow (servant leadership lifting the team)
-  people:`<svg viewBox="0 0 36 36"><circle cx="11" cy="10" r="4"/><circle cx="25" cy="10" r="4"/><path d="M3 27c0-4.4 3.6-8 8-8h14c4.4 0 8 3.6 8 8"/><path d="M18 13v14M15 22l3 5 3-5"/></svg>`,
-  // S13: Campaign ROI — bars with wrong trend replaced by correct trend line
-  barChart:`<svg viewBox="0 0 36 36"><rect x="5" y="20" width="5" height="9"/><rect x="13" y="14" width="5" height="15"/><rect x="21" y="17" width="5" height="12"/><path d="M3 29h30"/><path d="M7 12 13 7 19 13 27 5"/><path d="M24 5h4v4"/></svg>`,
-  // S14: Churn Analysis — funnel + magnifying glass (finding where churn was born)
-  funnel:`<svg viewBox="0 0 36 36"><path d="M5 7h26l-10 13v7l-6-3V20z"/><circle cx="26" cy="27" r="6"/><line x1="23" y1="27" x2="29" y2="27"/><line x1="26" y1="24" x2="26" y2="30"/><path d="M30 31 33 34"/></svg>`,
-  // S15: Risk Management Framework — shield with structured data grid inside
-  shield2:`<svg viewBox="0 0 36 36"><path d="M18 4 7 9v9c0 6.5 4.5 11 11 13 6.5-2 11-6.5 11-13V9z"/><line x1="11" y1="17" x2="25" y2="17"/><line x1="11" y1="20" x2="25" y2="20"/><line x1="11" y1="23" x2="21" y2="23"/><line x1="15" y1="13" x2="15" y2="26"/><line x1="19" y1="13" x2="19" y2="26"/></svg>`,
-  // S16: Securities Automation — two interlocking gears (workflow automation system)
-  gear:`<svg viewBox="0 0 36 36"><circle cx="13" cy="13" r="4"/><path d="M13 5v4M13 17v4M5 13h4M17 13h4M7.6 7.6l2.8 2.8M15.6 15.6l2.8 2.8M7.6 18.4l2.8-2.8"/><circle cx="24" cy="24" r="5"/><path d="M24 14v6M24 28v6M13 24h6M29 24h6M16.5 16.5l3.5 3.5M28.5 28.5l3.5 3.5M16.5 31.5l3.5-3.5"/></svg>`};
+const SVG={coin:`<svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="14"/><path d="M18 10v16M14 13.5c0-1.93 1.79-3.5 4-3.5s4 1.57 4 3.5-1.79 3.5-4 3.5-4 1.57-4 3.5 1.79 3.5 4 3.5 4-1.57 4-3.5"/></svg>`,shield:`<svg viewBox="0 0 36 36"><path d="M18 3 6 8v10c0 7 6 12 12 14 6-2 12-7 12-14V8z"/><path d="m13 18 3 3 7-7"/></svg>`,compass:`<svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="14"/><path d="m23 13-2.5 7.5L13 23l2.5-7.5z"/></svg>`,chart:`<svg viewBox="0 0 36 36"><path d="M6 26 14 18l6 4 10-12"/><rect x="4" y="4" width="28" height="28" rx="3"/></svg>`,handshake:`<svg viewBox="0 0 36 36"><path d="M4 22h5l3 3 6-1 6-6M32 22h-5l-3-9-6 2-5 1"/><path d="M17 15 21 19 26 14"/></svg>`,robot:`<svg viewBox="0 0 36 36"><rect x="8" y="13" width="20" height="15" rx="3"/><circle cx="14" cy="20" r="2"/><circle cx="22" cy="20" r="2"/><path d="M14 28v3M22 28v3M18 13V7M14 7h8"/></svg>`,building:`<svg viewBox="0 0 36 36"><rect x="4" y="10" width="28" height="22"/><path d="M12 32V20h12v12M4 10l14-6 14 6"/></svg>`,trending:`<svg viewBox="0 0 36 36"><path d="M4 26 12 18l6 4 14-14"/><path d="M24 8h8v8"/></svg>`,checklist:`<svg viewBox="0 0 36 36"><rect x="6" y="4" width="24" height="28" rx="3"/><path d="m12 14 2.5 3L20 12M12 21h12M12 26h8"/></svg>`,link:`<svg viewBox="0 0 36 36"><path d="M14 22a7 7 0 0 0 10-10l-3-3"/><path d="M22 14a7 7 0 0 0-10 10l3 3"/><line x1="15" y1="21" x2="21" y2="15"/></svg>`,book:`<svg viewBox="0 0 36 36"><path d="M6 5h18a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H6z"/><path d="M12 12h10M12 17h10M12 22h6"/></svg>`,people:`<svg viewBox="0 0 36 36"><circle cx="13" cy="10" r="4"/><circle cx="23" cy="10" r="4"/><path d="M4 30c0-5 4-9 9-9h10c5 0 9 4 9 9"/></svg>`,barChart:`<svg viewBox="0 0 36 36"><rect x="6" y="20" width="6" height="10"/><rect x="15" y="12" width="6" height="18"/><rect x="24" y="6" width="6" height="24"/><path d="M4 32h28"/></svg>`,funnel:`<svg viewBox="0 0 36 36"><path d="M4 6h28l-11 14v10l-6-3V20z"/></svg>`,shield2:`<svg viewBox="0 0 36 36"><path d="M18 3 6 8v10c0 7 6 12 12 14 6-2 12-7 12-14V8z"/><path d="M12 18h12M18 12v12"/></svg>`,gear:`<svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="4"/><path d="M18 4v4M18 28v4M4 18h4M28 18h4M7.76 7.76l2.83 2.83M25.41 25.41l2.83 2.83M7.76 28.24l2.83-2.83M25.41 10.59l2.83-2.83"/></svg>`};
 
 /* ── Diagram Renderers ── */
 /* ── Diagram Renderers ── */
@@ -1130,20 +1064,7 @@ buildFilters();
 renderGrid();
 activateDt(1);
 
-/* ── Mobile nav: short labels so all 5 tabs fit on screen ── */
-const MOBILE_LABELS={'about':'About','superpowers':'Powers','work':'Works','techstack':'Stack','contact':'Contact'};
-function applyMobileLabels(){
-  const mobile=window.innerWidth<=600;
-  document.querySelectorAll('.nav-tab').forEach(tab=>{
-    const id=tab.dataset.tab;
-    if(!tab.dataset.fullLabel)tab.dataset.fullLabel=tab.textContent;
-    tab.textContent=mobile&&MOBILE_LABELS[id]?MOBILE_LABELS[id]:tab.dataset.fullLabel;
-  });
-}
-applyMobileLabels();
-window.addEventListener('resize',applyMobileLabels);
-
-// Fix tooltip overflow on right-edge tags (desktop hover)
+// Fix tooltip overflow on right-edge tags
 document.querySelectorAll('.skill-tag').forEach(tag=>{
   tag.addEventListener('mouseenter',()=>{
     const tip=tag.querySelector('.skill-tooltip');
@@ -1156,40 +1077,6 @@ document.querySelectorAll('.skill-tag').forEach(tag=>{
       tip.style.right='0';
       tip.classList.add('tip-right');
     }
-  });
-});
-
-// Mobile skill info bottom panel
-(function(){
-  const panel=document.createElement('div');
-  panel.id='skillInfoPanel';
-  panel.innerHTML='<div class="sip-handle"></div><div class="sip-inner"><p class="sip-title" id="sipTitle"></p><button class="sip-close" onclick="closeSip()">&#x2715;</button><p class="sip-body" id="sipBody"></p></div>';
-  document.body.appendChild(panel);
-  const overlay=document.createElement('div');
-  overlay.id='skillInfoOverlay';
-  overlay.addEventListener('click',closeSip);
-  document.body.appendChild(overlay);
-})();
-function openSip(name,content){
-  document.getElementById('sipTitle').textContent=name;
-  document.getElementById('sipBody').textContent=content;
-  document.getElementById('skillInfoPanel').classList.add('open');
-  document.getElementById('skillInfoOverlay').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeSip(){
-  document.getElementById('skillInfoPanel').classList.remove('open');
-  document.getElementById('skillInfoOverlay').classList.remove('open');
-  document.body.style.overflow='';
-}
-document.querySelectorAll('.skill-tag').forEach(tag=>{
-  tag.addEventListener('click',e=>{
-    if(window.innerWidth>600)return;
-    e.stopPropagation();
-    const tip=tag.querySelector('.skill-tooltip');
-    if(!tip)return;
-    const name=tag.firstChild.textContent.trim();
-    openSip(name,tip.textContent.trim());
   });
 });
 
